@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/createData.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/createData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.bat" beforeDir="false" afterPath="$PROJECT_DIR$/start.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/create.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uslugi/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uslugi/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uslugi/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uslugi/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uslugi/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uslugi/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GGQ52Lc07Ib7u5JrNikAFFy1Hi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/My place/.kursovaya/website&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My place\.kursovaya\website\views" />
+      <recent name="D:\My place\website\views\test" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="" />
+      <created>1666012254519</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666012254519</updated>
+      <workItem from="1666012256051" duration="9206000" />
+      <workItem from="1666497008597" duration="135000" />
+      <workItem from="1666728498303" duration="503000" />
+      <workItem from="1666730293642" duration="2044000" />
+      <workItem from="1666736421454" duration="1289000" />
+      <workItem from="1666738256554" duration="1505000" />
+      <workItem from="1666739784177" duration="400000" />
+      <workItem from="1666740199582" duration="397000" />
+      <workItem from="1666763620194" duration="3000" />
+      <workItem from="1668039357032" duration="349000" />
+      <workItem from="1668039727329" duration="1408000" />
+      <workItem from="1668041162881" duration="458000" />
+      <workItem from="1668041631362" duration="83000" />
+      <workItem from="1668443404056" duration="3503000" />
+      <workItem from="1668446957202" duration="3674000" />
+      <workItem from="1668514819277" duration="6988000" />
+      <workItem from="1668565054415" duration="10376000" />
+      <workItem from="1668575892032" duration="344000" />
+      <workItem from="1668576288356" duration="32000" />
+      <workItem from="1668576498075" duration="5099000" />
+    </task>
+    <task id="LOCAL-00001" summary="main version of website">
+      <created>1666738673941</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666738673941</updated>
+    </task>
+    <task id="LOCAL-00002" summary="main version of website">
+      <created>1666740047268</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666740047268</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header">
+      <created>1668041263441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668041263441</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header">
+      <created>1668450732098</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668450732099</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="main version of website" />
+    <MESSAGE value="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header" />
+  </component>
+</project>

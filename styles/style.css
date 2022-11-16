@@ -1,0 +1,214 @@
+/* Сам сайт */
+body {
+    position: relative;
+    font-family: 'Segoe UI Symbol', system-ui;
+    font-size: 18px;
+    line-height: 1.4;
+    min-width: 320px;
+    overflow-x: hidden;
+    height: auto;
+    background: #5D88AC;
+}
+
+/*top: 50%;
+left: 50%;
+width: 450px;
+height: 450px;
+position: absolute;
+margin-top: -225px;
+margin-left: -225px;
+color: #fff;*/
+
+table{
+    background-color: #32618a;
+}
+
+tr{
+    color:#fff;
+}
+
+.sub-header {
+    height: 70px;
+}
+
+/* Шапка */
+header {
+    position: fixed;
+    width: 100%;
+    background: #2B5477;
+    height: 70px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+/* */
+.container {
+    position:fixed;
+    height: 70px;
+    padding-left: 50px;
+}
+
+#about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 50px;
+}
+
+#about-us p {
+    width: 400px;
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+#about-us-container{
+    background: #7d9fbc;
+    color: #fff;
+}
+
+/* Логотип */
+.logo{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    position: absolute;
+    object-fit: cover;
+    vertical-align: middle;
+    left: 35px;
+    bottom: 10px;
+}
+
+/* */
+.pages {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* */
+.buttons {
+    list-style-type: none;
+    padding-left: 70px;
+    margin-bottom: 0;
+}
+
+/* Вкладка пользователи, добавлен для анимации hover */
+.el1, .el2, .el3, .el4, .el5, .el6 {
+    color: #fff;
+}
+
+
+/* анимация hover */
+.el1:hover, .el2:hover, .el3:hover, .el4:hover, .el5:hover, .el6:hover{
+    border-color: #7d9fbc;
+    color: #7d9fbc;
+}
+
+/* */
+.btn {
+    justify-content: center;
+    align-items: center;
+}
+
+/* */
+.buttons li {
+    display:inline-block;
+}
+
+/* */
+.buttons li a {
+    display:inline-block;
+}
+
+/* */
+.auth {
+    position: center;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/* */
+.auth li{
+    display: inline-block;
+}
+
+/* */
+.auth li a{
+    display: inline-block;
+}
+
+/* */
+.data {
+    list-style-type: none;
+    padding-left: 1000px;
+    margin-bottom: 0;
+}
+
+/* */
+.data li{
+    display: inline-block;
+}
+
+/* */
+.data li a{
+    display: inline-block;
+}
+
+.topl {
+    height: 40px;
+    padding-left: 100%;
+}
+
+.wrap {
+    width: 40px;
+    overflow: hidden;
+}
+
+.topl a {
+    float: left;
+    border-left: 1px solid rgba(0,0,0,0);
+    border-right: 1px solid rgba(0,0,0,0);
+    height: 40px;
+    line-height: 40px;
+    width: 45px;
+    text-decoration: none;
+    color: #7d9fbc;
+    transition:0.2s ease-in-out;
+}
+
+.topl .menux {
+    position: absolute;
+    top:75px;
+    left: 1200px;
+    width: 200px;
+    background: #5D88AC;
+    border-color: #7d9fbc;
+    border-top: 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.topl .menux a {
+    width: 95%;
+    height: 25px;
+    margin: 1%;
+    margin-top: 5px;
+    background: #fff;
+    line-height: 25px;
+    border: 1px solid #a3a3a3;
+    margin-left: 4px;
+}
+
+.topl .menux a:last-child {
+    margin-bottom: 5px;
+}
+
+.topl a:last-child{
+    border-left: 1px solid #a3a3a3;
+    border-right: 1px solid #a3a3a3;
+    margin-right: 0;
+}
