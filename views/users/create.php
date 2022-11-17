@@ -1,31 +1,23 @@
 <?php
-require ('../layout/header.php');
-require ($_SERVER['DOCUMENT_ROOT'].'/controllers/Role.php');
+require('../layout/header.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Roles.php');
 ?>
 <div class="container mt-5">
     <form action="../../middleware/createUser.php"
           method="post"
           class="d-flex flex-column justify-content-center align-items-center">
-        <h3>Добавление</h3>
-        <div class="col-5">
-            <label for="name">Логин</label>
-            <input id="name" name="name" type="text" class="form-control" required>
+        <h3 class="text-white">Добавление</h3>
+        <div class="text-white col-5 mb-3">
+            <label for="name"></label>
+            <input id="name" name="name" type="text" class="form-control" placeholder="Логин" required>
         </div>
-        <div class="col-5">
-            <label for="password">Пароль</label>
-            <input id="password" name="password" type="password" class="form-control" required>
+        <div class="text-white col-5 mb-3">
+            <label for="password"></label>
+            <input id="password" name="password" type="password" class="form-control" placeholder="Пароль" required>
         </div>
-        <div class="col-5">
+        <div class="text-white col-5 mb-3">
             <label for="role">Роль</label>
-            <select name="role_id" id="role" class="form-control">
-                <?php
-                $role = new Role();
-                $data = $role->get();
-                foreach ($data as $row){
-                ?>
-                <option value="<?php echo $row['id'];?>"><?php echo $row['name'];?></option>
-                <?php }?>
-            </select>
+            <input id="role" name="role" type="number" class="form-control" placeholder="1 - админ, 2 - сотрудник, 3 - пользователь" required>
         </div>
         <div class="mt-3">
             <button class="btn btn-primary" type="submit">Отправить</button>
@@ -33,5 +25,4 @@ require ($_SERVER['DOCUMENT_ROOT'].'/controllers/Role.php');
     </form>
 </div>
 <?php
-require ('../layout/footer.php');
 ?>

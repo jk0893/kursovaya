@@ -5,9 +5,7 @@ class User extends DB
 {
     public function getUser()
     {
-        return $this->DBAll($this->connect(),
-            'SELECT * from serving_comp_tech.users
-            join serving_comp_tech.roles on role_id=roles.id');
+        return $this->DBAll('SELECT * from serving_comp_tech.users');
     }
 
     public function deleteUser($request)
@@ -21,16 +19,15 @@ class User extends DB
     public function createUser($request)
     {
         $req = json_decode($request);
-        $name = $req->name;
-        $pass = $req->password;
+        $username = $req->name;
+        $password = $req->password;
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $sql = $connect->prepare('SELECT users.id as id,users.username as name from serving_comp_tech.users;
-            INSERT INTO serving_comp_tech.users (username,password) values (:name,:password);');
+            $sql = $connect->prepare('INSERT INTO serving_comp_tech.users (username,password) values (:username,:password);');
             $sql->execute([
-                'name' => $name,
-                'password' => $pass
+                'name' => $username,
+                'password' => $password
             ]);
             $connect->commit();
             return json_encode([
@@ -44,4 +41,25 @@ class User extends DB
         }
     }
 
+    public function updateUser($request)
+    {
+        $req = json_decode($request);
+        $id = $req->id;
+        $username = $req->username;
+        $password = $req->password;
+        $connect = $this->connect();
+        try {
+            $connect->beginTransaction();
+            $connect->exec("UPDATE serving_comp_tech.users SET username='{$username}', password='{$password}' WHERE id={$id} ");
+            $connect->commit();
+            return json_encode([
+                'message' => 'Пользователь обновлён'
+            ]);
+        } catch (PDOException $e) {
+            $connect->rollBack();
+            return json_encode([
+                'message' => $e->getMessage()
+            ]);
+        }
+    }
 }

@@ -7,19 +7,21 @@ class roles extends DB
     public function login($request)
     {
         $req = json_decode($request);
-        $username = $req->name;
+        $username = $req->username;
         $password = $req->password;
+        $role_id = $req->roles_id;
         $connect = $this->connect();
-        $sql = $connect->prepare('SELECT * from serving_comp_tech.users where username=:username and password=:password');
+        $sql = $connect->prepare('SELECT * from serving_comp_tech.users where username=:username and password=:password and role_id=:role_id');
         $sql->execute([
             'username' => $username,
-            'pass' => $password,
+            'password' => $password,
+            'role_id' => $role_id
         ]);
         $data = $sql->fetch(PDO::FETCH_OBJ);
         if ($data) {
             session_start();
-            $_SESSION['user'] = (object)[
-                'username' => $data->name,
+            $_SESSION['username'] = (object)[
+                'username' => $data->username,
                 'role_id' => $data->role_id
             ];
         }
@@ -30,6 +32,7 @@ class roles extends DB
         $req = json_decode($request);
         $username = $req->username;
         $password = $req->password;
+        $role_id = $req->role_id;
         $connect = $this->connect();
         $sql = $connect->prepare('SELECT * from serving_comp_tech.users where username=:username and password=:password');
         $sql->execute(array(
@@ -46,7 +49,7 @@ class roles extends DB
         $sql->execute([
             'username' => $username,
             "password" => $password,
-            "role" => 3
+            "role_id" => 3
         ]);
         $sql = $connect->prepare('SELECT * from serving_comp_tech.users where username=:username and password=:pass');
         $sql->execute([
@@ -58,7 +61,7 @@ class roles extends DB
             session_start();
             $_SESSION['user'] = (object)[
                 'username' => $data->username,
-                'role' => $data->role
+                'role_id' => $data->role_id
             ];
             return json_encode([
                 'message' => 'Пользователь добавлен'

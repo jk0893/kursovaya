@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Поправил контроллеры, добавил иконку с контекстным меню, в котором авторизация и регистрация">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/DB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Roles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Warehouse.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Warehouse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/img/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/createData.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/createData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/createUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/createUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery-3.6.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-3.6.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/script.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/start.bat" beforeDir="false" afterPath="$PROJECT_DIR$/start.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/data/create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/data/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/data/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/data/update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/data/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/data/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/data/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/data/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/data/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/uslugi/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uslugi/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/uslugi/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uslugi/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/uslugi/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uslugi/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/lk.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/lk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uslugi/create.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uslugi/delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uslugi/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uslugi/update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/warehouse/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +115,8 @@
       <workItem from="1668565054415" duration="10376000" />
       <workItem from="1668575892032" duration="344000" />
       <workItem from="1668576288356" duration="32000" />
-      <workItem from="1668576498075" duration="5099000" />
+      <workItem from="1668576498075" duration="5365000" />
+      <workItem from="1668706212218" duration="8176000" />
     </task>
     <task id="LOCAL-00001" summary="main version of website">
       <created>1666738673941</created>
@@ -123,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668450732099</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Поправил контроллеры, добавил иконку с контекстным меню, в котором авторизация и регистрация">
+      <created>1668581820743</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668581820743</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +170,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="main/main" />
                       </list>
                     </value>
                   </entry>
@@ -155,6 +185,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main version of website" />
     <MESSAGE value="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Привязал файл стилей к шапке, чтобы избавиться от лишних строк css в php файле. Добавил строки кода в стилях для анимаций кнопок в header" />
+    <MESSAGE value="Поправил контроллеры, добавил иконку с контекстным меню, в котором авторизация и регистрация" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поправил контроллеры, добавил иконку с контекстным меню, в котором авторизация и регистрация" />
   </component>
 </project>

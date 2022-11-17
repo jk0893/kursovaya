@@ -10,21 +10,27 @@ body {
     background: #5D88AC;
 }
 
-/*top: 50%;
-left: 50%;
-width: 450px;
-height: 450px;
-position: absolute;
-margin-top: -225px;
-margin-left: -225px;
-color: #fff;*/
-
-table{
-    background-color: #32618a;
+#cards {
+    border-color: #6e9ecb;
+    border-width: 2px;
+    background: #355e85;
+    color: #7d9fbc;
 }
 
-tr{
-    color:#fff;
+#submit{
+    border-color: #6e9ecb;
+    border-width: 2px;
+    background: #355e85;
+    color: #a7d4fd;
+}
+
+table {
+    background-color: #32618a;
+    width: 50%;
+}
+
+tr {
+    color: #fff;
 }
 
 .sub-header {
@@ -46,7 +52,7 @@ header {
 
 /* */
 .container {
-    position:fixed;
+    position: fixed;
     height: 70px;
     padding-left: 50px;
 }
@@ -65,13 +71,13 @@ header {
     background-color: #f1f1f1;
 }
 
-#about-us-container{
+#about-us-container {
     background: #7d9fbc;
     color: #fff;
 }
 
 /* Логотип */
-.logo{
+.logo {
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     position: absolute;
     object-fit: cover;
@@ -96,15 +102,13 @@ header {
 }
 
 /* Вкладка пользователи, добавлен для анимации hover */
-.el1, .el2, .el3, .el4, .el5, .el6 {
-    color: #fff;
+.el1, .el2 {
+    color: #a7d4fd;
 }
-
-
-/* анимация hover */
-.el1:hover, .el2:hover, .el3:hover, .el4:hover, .el5:hover, .el6:hover{
-    border-color: #7d9fbc;
-    color: #7d9fbc;
+/* анимация hover для кнопок */
+.el1:hover,.el2:hover {
+    border-color: #a7d4fd;
+    color: #a7d4fd;
 }
 
 /* */
@@ -115,12 +119,12 @@ header {
 
 /* */
 .buttons li {
-    display:inline-block;
+    display: inline-block;
 }
 
 /* */
 .buttons li a {
-    display:inline-block;
+    display: inline-block;
 }
 
 /* */
@@ -132,12 +136,12 @@ header {
 }
 
 /* */
-.auth li{
+.auth li {
     display: inline-block;
 }
 
 /* */
-.auth li a{
+.auth li a {
     display: inline-block;
 }
 
@@ -149,12 +153,12 @@ header {
 }
 
 /* */
-.data li{
+.data li {
     display: inline-block;
 }
 
 /* */
-.data li a{
+.data li a {
     display: inline-block;
 }
 
@@ -170,19 +174,19 @@ header {
 
 .topl a {
     float: left;
-    border-left: 1px solid rgba(0,0,0,0);
-    border-right: 1px solid rgba(0,0,0,0);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0, 0);
     height: 40px;
     line-height: 40px;
     width: 45px;
     text-decoration: none;
     color: #7d9fbc;
-    transition:0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .topl .menux {
     position: absolute;
-    top:75px;
+    top: 75px;
     left: 1200px;
     width: 200px;
     background: #5D88AC;
@@ -207,7 +211,7 @@ header {
     margin-bottom: 5px;
 }
 
-.topl a:last-child{
+.topl a:last-child {
     border-left: 1px solid #a3a3a3;
     border-right: 1px solid #a3a3a3;
     margin-right: 0;

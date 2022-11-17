@@ -22,5 +22,4 @@ if (isset($_GET['message'])) {
 </body>
 </html>
 <?php
-require('views/layout/footer.php');
 ?>
