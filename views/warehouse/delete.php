@@ -1,13 +1,13 @@
 <?php
 require_once ('../layout/header.php');
-require_once ('../../controllers/User.php');
+require_once ('../../controllers/Warehouse.php');
 ?>
 
 <div class="container mx-auto">
     <div style="display: grid; grid-template-columns: repeat(3,1fr)">
         <?php
-        $user = new User();
-        $data = $user->get();
+        $user = new Warehouse();
+        $data = $user->getWarehouse();
         foreach ($data as $key =>$row){
             ?>
             <div class="card m-2 shadow">
@@ -18,10 +18,10 @@ require_once ('../../controllers/User.php');
                         <span class="card-text"><?php echo $row['role'];?></span>
                     </div>
                     <div class="my-2">
-                        <form action="../../middleware/delete.php" method="post">
+                        <form action="../../middleware/warehouse/deleteWarehouse.php" method="post">
                             <label>
-                            <input name="id" value="<?php echo $row['id'];?>" type="text" hidden>
-                            <button class="btn btn-danger" type="submit">Удалить</button>
+                                <input name="id" value="<?php echo $row['id'];?>" type="text" hidden>
+                                <button class="btn btn-danger" type="submit">Удалить</button>
                             </label>
                         </form>
                     </div>
@@ -32,5 +32,4 @@ require_once ('../../controllers/User.php');
 </div>
 
 <?php
-require_once ('../layout/footer.php');
 ?>

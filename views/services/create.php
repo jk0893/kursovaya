@@ -4,44 +4,44 @@ require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
 ?>
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/style.css">
-    <div class="container text-light">
-        <form action=""
+<?php
+if (isset($_POST['name'])) {
+    $db = new Services();
+    $data = $db->createService(json_encode([
+        'name' => $_POST['name'],
+        'type' => $_POST['type'],
+        'price' => $_POST['price']
+    ]));
+    $message = json_decode($data)->message;
+    echo $message;
+}
+?>
+    <div class="container mt-5">
+        <form action="../../middleware/user/createUser.php"
               method="post"
-              class="d-flex flex-column justify-content-center align-items-center">
-            <div class="position-absolute top-50 end-50 d-flex flex-column justify-content-center align-items-center">
-                <h3>Добавление</h3>
-                <div>
-                    <div class="mb-2">
-                        <label class="form-label text-light">Название услуги:</label>
-                        <input type="text" name="name" class="form-control" id="first_name"
-                               aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-2">
-                        <label class="form-label text-light">Тип услуги:</label>
-                        <input type="text" name="type" class="form-control" id="last_name" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-2">
-                        <label class="form-label text-light">Цена:</label>
-                        <input type="number" name="price" class="form-control" id="father_name"
-                               aria-describedby="emailHelp">
-                    </div>
-                    <button type="submit" class="btn btn-outline-light">Отправить</button>
-                </div>
+              class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <h3 class="mt-5 mb-4" style="color: #a7d4fd">Добавление</h3>
+            <div class="text-white col-2 mb-3">
+                <label>
+                    <input id="name" name="name" type="search" class="form-control" placeholder="Название" required>
+                </label>
+            </div>
+            <div class="text-white col-2 mb-3">
+                <label>
+                <input id="type" name="type" type="search" class="form-control" placeholder="Количество" required>
+                </label>
+            </div>
+            <div class="text-white col-2 mb-3">
+                <label>
+                    <input id="price" name="price" type="search" class="form-control"
+                           placeholder="Стоимость" required>
+                </label>
+            </div>
+            <div class="mt-2">
+                <button class="btn btn-primary" id="submit" type="submit">Отправить</button>
             </div>
         </form>
-        <?php
-        if (isset($_POST['name'])) {
-            require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
-            $db = new Services();
-            $data = $db->createService(json_encode([
-                'name' => $_POST['name'],
-                'type' => $_POST['type'],
-                'price' => $_POST['price']
-            ]));
-            $message = json_decode($data)->message;
-            echo $message;
-        }
-        ?>
     </div>
+
 <?php
 ?>

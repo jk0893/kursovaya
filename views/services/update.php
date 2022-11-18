@@ -1,46 +1,51 @@
 <?php
-require_once('../layout/header.php');
-require_once('../../controllers/Services.php');
+require('../layout/header.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
 $db = new Services();
+$data = $db->getService();
+foreach ($data as $key => $row) {
+    ?>
+
+    <div class="buttons">
+        <div class="pages">
+            <div class="d-flex">
+                <ul class="data">
+                    <li><a class="btn el2" href="/views/services/create.php">Добавить</a></li>
+                    <li><a class="btn el2" href="/views/services/update.php">Изменить</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card m-4 shadow" id="cards" style="border-radius: 8px">
+        <div class="card-body">
+            <div class="mb-3">
+                <span class="card-subtitle" style="color: #83c4ff">Название: </span>
+                <label>
+                    <input class="card-text" style="border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85" value="<?php echo $row['name']; ?>">
+                </label>
+            </div>
+            <div class="mb-3">
+                <span class="card-subtitle mb-3" style="color: #83c4ff">Тип: </span>
+                <label>
+                    <input class="card-text" style="border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85" value="<?php echo $row['type']; ?>">
+                </label>
+            </div>
+            <div class="mb-3">
+                <span class="card-subtitle" style="color: #83c4ff">Стоимость: </span>
+                <label>
+                    <input class="card-text mb-1" style="border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85" value="<?php echo $row['price']; ?>">
+                </label>
+            </div>
+            <div class="my-2">
+                <form action="../../middleware/service/updateService.php" method="post">
+                    <label>
+                        <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden>
+                        <button class="btn" type="submit" id="submit">Изменить</button>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+<?php
 ?>
-<table class="table table-hover table-dark">
-    <thead>
-    <tr>
-        <th>id</th>
-        <th>Название услуги</th>
-        <th>Сроки</th>
-        <th>Стоимость</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-    $data = $db->getService();
-    foreach ($data as $key => $row) {
-        ?>
-        <tr>
-            <form class="mx-2" action="../../middleware/updateService.php" method="post">
-                <td>
-                    <?php echo ++$key; ?>
-                    <input id="id_services" name="id_services" type="text" value="<?php echo $row["id_services"]; ?>" class="form-control" hidden
-                           required>
-                </td>
-                <td>
-                    <input id="service" name="service" type="text" value="<?php echo $row["service"]; ?>" class="form-control"
-                           required>
-                </td>
-                <td>
-                    <input id="deadlines" name="deadlines" type="text"
-                           value="<?php echo $row["deadlines"]; ?>" class="form-control" required>
-                </td>
-                <td>
-                    <input id="price" name="price" type="text" value="<?php echo $row["price"]; ?>"
-                           class="form-control" required>
-                </td>
-                <td>
-                    <button type="submit" class="btn btn-primary">Изменить</button>
-                </td>
-            </form>
-        </tr>
-    <?php } ?>
-    </tbody>
-</table>

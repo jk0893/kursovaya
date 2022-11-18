@@ -15,9 +15,11 @@ body {
     border-width: 2px;
     background: #355e85;
     color: #7d9fbc;
+    max-width: 17%;
+    text-align: center;
 }
 
-#submit{
+#submit {
     border-color: #6e9ecb;
     border-width: 2px;
     background: #355e85;
@@ -57,23 +59,38 @@ header {
     padding-left: 50px;
 }
 
+.card{
+    text-align: center;
+}
+
+.card img {
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    filter: blur(1px);
+}
+.card-title{
+    color: #6e9ecb;
+}
+
 #about-us {
+    border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding-top: 50px;
+    height: 15%;
+    left: 25%;
+    top: 75px;
+    border-color: #6e9ecb;
+    border-width: 3px;
+    background: #355e85;
+    color: #7d9fbc;
+    max-width: 50%;
 }
 
 #about-us p {
-    width: 400px;
-    padding: 15px;
-    background-color: #f1f1f1;
-}
-
-#about-us-container {
-    background: #7d9fbc;
-    color: #fff;
+    width: 100%;
+    color: #a7d4fd;
+    align-items: end;
 }
 
 /* Логотип */
@@ -105,16 +122,23 @@ header {
 .el1, .el2 {
     color: #a7d4fd;
 }
+
 /* анимация hover для кнопок */
-.el1:hover,.el2:hover {
+.el1:hover, .el2:hover {
     border-color: #a7d4fd;
     color: #a7d4fd;
 }
 
-/* */
-.btn {
-    justify-content: center;
-    align-items: center;
+#username, #password, #role, #name, #type, #price{
+    background-color: #355e85;
+    color: #a7d4fd;
+    border-color: #a7d4fd;
+}
+
+#username_auth, #password_auth{
+    background-color: #a7d4fd;
+    color: #355e85;
+    border-color: #355e85;
 }
 
 /* */
@@ -148,8 +172,8 @@ header {
 /* */
 .data {
     list-style-type: none;
-    padding-left: 1000px;
-    margin-bottom: 0;
+    padding-left: 1100px;
+    margin-bottom: -20px;
 }
 
 /* */
@@ -172,6 +196,11 @@ header {
     overflow: hidden;
 }
 
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
 .topl a {
     float: left;
     border-left: 1px solid rgba(0, 0, 0, 0);
@@ -187,23 +216,21 @@ header {
 .topl .menux {
     position: absolute;
     top: 75px;
-    left: 1200px;
+    left: 91%;
     width: 200px;
-    background: #5D88AC;
-    border-color: #7d9fbc;
-    border-top: 0;
-    border-radius: 5px;
+    background: #32618a;
+    border-radius: 7px;
     display: none;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .topl .menux a {
-    width: 95%;
+    width: 100%;
     height: 25px;
     margin: 1%;
     margin-top: 5px;
-    background: #fff;
     line-height: 25px;
-    border: 1px solid #a3a3a3;
     margin-left: 4px;
 }
 
@@ -212,7 +239,5 @@ header {
 }
 
 .topl a:last-child {
-    border-left: 1px solid #a3a3a3;
-    border-right: 1px solid #a3a3a3;
     margin-right: 0;
 }

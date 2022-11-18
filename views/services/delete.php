@@ -23,7 +23,7 @@ require_once ('../../controllers/Services.php');
                     <span class="card-text"><?php echo $row['price'];?></span>
                 </div>
                 <div class="my-2">
-                    <form action="../../middleware/delete.php" method="post">
+                    <form action="../../middleware/service/deleteService.php" method="post">
                         <label>
                             <input name="id" value="<?php echo $row['id'];?>" type="text" hidden>
                             <button class="btn btn-info text-white" type="submit">Удалить</button>

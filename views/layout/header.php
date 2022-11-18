@@ -43,37 +43,40 @@
                     <li class="list__button"><a class="btn el1" href="../../about.php">О сервисе</a></li>
                 </ul>
             </div>
-            <ul class="auth">
+            <div class="auth">
                 <div class='topl'>
                     <div class='wrap'>
                         <a href='#' id='ax1'><img src="/img/user.png" alt="login" width="35"></a>
                         <div class='menux' id='me1'>
-                            <div class="login">
+                            <div>
                                 <form action="/middleware/auth/auth.php" id="container">
-                                    <div class="mb-1 position-sticky">
-                                        <label class="form-label " style="color:whitesmoke">
-                                            <input type="text" class="form-control" id="username"
-                                                   aria-describedby="username" placeholder="Логин">
+                                    <label class="mt-3" style="color:#a7d4fd; font-size: 20px">Авторизация</label>
+                                    <div class="mt-3 mb-1">
+                                        <label class="form-label" style="color:whitesmoke">
+                                            <input type="search" class="form-control" id="username_auth"
+                                                   aria-describedby="username" placeholder="Логин" size="15">
                                         </label>
                                     </div>
-                                    <div class="mb-1 position-sticky">
+                                    <div class="mb-1">
                                         <label for="exampleInputEmail1" style="color:whitesmoke" class="form-label">
-                                            <input type="password" class="form-control" id="password"
+                                            <input type="search" class="form-control" size="15" id="password_auth"
                                                    aria-describedby="password" placeholder="Пароль">
                                         </label>
                                     </div>
-                                    <button type="submit" class="mb-1 btn btn-outline-info"
-                                            style="color:whitesmoke; background-color:#76acd9">Отправить
+                                    <button type="submit" class="mb-1 btn"
+                                            style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">Отправить
                                     </button>
                                 </form>
                             </div>
                             <div>
-                                <li><a class="" href="/middleware/auth/registration.php">Нет аккаунта?</a></li>
+                                <ul>
+                                    <li><a href="/middleware/auth/registration.php">Нет аккаунта?</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </ul>
+            </div>
         </div>
     </div>
 </header>

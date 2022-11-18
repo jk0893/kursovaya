@@ -1,9 +1,10 @@
 <?php
-require ('DB.php');
+require('DB.php');
 
 class Services extends DB
 {
-    public function getService(){
+    public function getService()
+    {
         return $this->DBAll('SELECT * from serving_comp_tech.services');
     }
 
@@ -14,44 +15,48 @@ class Services extends DB
         $type = $req->type;
         $price = $req->price;
         $connect = $this->connect();
-        try{
+        try {
             $connect->beginTransaction();
-            $sql=$connect->prepare('INSERT INTO serving_comp_tech.services(name,type,price) values (:name,:type,:price);');
-            $sql->execute([
-                'name'=>$name,
-                'type'=>$type,
-                'price'=>$price
-            ]);
+            $connect->exec("INSERT INTO serving_comp_tech.services(name,type,price) values ('{$name}','{$type}','{$price}')");
             $connect->commit();
             return json_encode([
-                'message'=>'Услуга(и) добавлена(ы)'
+                'message' => 'Услуга добавлена'
             ]);
-        }catch (PDOException $e){
+        } catch (PDOException $e) {
             $connect->rollBack();
             return json_encode([
-                'message'=>$e->getMessage()
+                'message' => $e->getMessage()
             ]);
         }
     }
 
-    public function updateService($request){
+    public function deleteService($request)
+    {
+        $req = json_decode($request);
+        return $this->transaction(
+            'DELETE FROM serving_comp_tech.services WHERE id=' . $req->id,
+            'Услуга удалена.');
+    }
+
+    public function updateService($request)
+    {
         $req = json_decode($request);
         $id = $req->id;
         $name = $req->name;
         $type = $req->type;
         $price = $req->price;
         $connect = $this->connect();
-        try{
+        try {
             $connect->beginTransaction();
             $connect->exec("UPDATE serving_comp_tech.services SET name='{$name}', type='{$type}', price='{$price}' WHERE id={$id} ");
             $connect->commit();
             return json_encode([
-                'message'=>'Услуга(ы) обновлены(ы)'
+                'message' => 'Услуга обновлена'
             ]);
-        }catch (PDOException $e){
+        } catch (PDOException $e) {
             $connect->rollBack();
             return json_encode([
-                'message'=>$e->getMessage()
+                'message' => $e->getMessage()
             ]);
         }
     }

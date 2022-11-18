@@ -3,7 +3,7 @@ require ('../layout/header.php');
 require ($_SERVER['DOCUMENT_ROOT'].'/controllers/Roles.php');
 ?>
 <div class="container mt-5">
-    <form action="../../middleware/createData.php"
+    <form action="../../middleware/warehouse/createWarehouse.php"
           method="post"
           class="d-flex flex-column justify-content-center align-items-center">
         <h3>Добавление</h3>

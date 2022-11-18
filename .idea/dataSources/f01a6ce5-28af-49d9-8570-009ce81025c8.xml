@@ -5510,6 +5510,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     </column>
     <column id="1248" parent="417" name="employee_id">
       <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <foreign-key id="1249" parent="417" name="position_roles_id_fk">
@@ -5517,7 +5518,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <RefColNames>id</RefColNames>
       <RefTableName>roles</RefTableName>
     </foreign-key>
-    <foreign-key id="1250" parent="417" name="position_employee__fk">
+    <foreign-key id="1250" parent="417" name="position_employee_id_fk">
       <ColNames>employee_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>employee</RefTableName>
@@ -5526,7 +5527,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="1252" parent="417" name="position_employee__fk">
+    <index id="1252" parent="417" name="position_employee_id_fk">
       <ColNames>employee_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -5536,7 +5537,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1254" parent="418" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5552,7 +5553,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1257" parent="419" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5578,7 +5579,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1262" parent="420" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>

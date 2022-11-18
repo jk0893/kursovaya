@@ -15,8 +15,9 @@ class DB
         return $sql->fetchAll();
     }
 
-    protected function transaction($connect, $query, $message)
+    protected function transaction($query, $message)
     {
+        $connect = $this->connect();
         try {
             $connect->beginTransaction();
             $connect->exec($query);
