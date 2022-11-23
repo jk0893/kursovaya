@@ -5,14 +5,14 @@ class User extends DB
 {
     public function getUser()
     {
-        return $this->DBAll('SELECT * from serving_comp_tech.users');
+        return $this->DBAll('SELECT serving_comp_tech.users.id, username, password, role_name from users, roles WHERE (role_id = roles.id)');
     }
 
     public function deleteUser($request)
     {
         $req = json_decode($request);
         return $this->transaction($this->connect(),
-            'DELETE from serving_comp_tech.users where username=' . $req->id,
+            'DELETE from serving_comp_tech.users where id=' . $req->id,
             'Пользователь удален');
     }
 
@@ -50,7 +50,7 @@ class User extends DB
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("UPDATE serving_comp_tech.users SET username='{$username}', password='{$password}' WHERE id={$id} ");
+            $connect->exec("UPDATE users SET username='{$username}', password='{$password}' WHERE id={$id} ");
             $connect->commit();
             return json_encode([
                 'message' => 'Пользователь обновлён'

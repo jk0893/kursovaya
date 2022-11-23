@@ -8,7 +8,6 @@ $db = new Warehouse();
             <div class="d-flex">
                 <ul class="data">
                     <li><a class="btn el2" href="/views/services/create.php">Добавить</a></li>
-                    <li><a class="btn el2" href="/views/services/update.php">Изменить</a></li>
                 </ul>
             </div>
         </div>
@@ -19,18 +18,18 @@ foreach ($data as $key => $row) {
     ?>
     <div class="card m-4 shadow" id="cards" style="border-radius: 8px">
         <div class="card-body">
-            <h5 class="card-title" style="color: #a7d4fd"><?php echo $row['hardware_name']; ?></h5>
-            <div>
+            <h5 class="card-title mb-2" style="color: #a7d4fd"><?php echo $row['hardware_name']; ?></h5>
+            <div class="mb-1">
                 <span class="card-subtitle" style="color: #83c4ff">Количество: </span>
                 <span class="card-text"><?php echo $row['quantity']; ?></span>
             </div>
             <div>
                 <span class="card-subtitle" style="color: #83c4ff">Стоимость: </span>
                 <span class="card-text"><?php echo $row['price']; ?></span>
-            </div>
-            <div class="my-2">
+            </div class="mb-1">
+            <div class="wrapper mt-3">
                 <div>
-                    <form action="../../middleware/warehouse/updateWarehouse.php" method="post">
+                    <form action="../../views/warehouse/update.php" method="post">
                         <label>
                             <button class="btn" type="submit" id="submit">Изменить</button>
                         </label>

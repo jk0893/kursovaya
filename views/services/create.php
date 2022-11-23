@@ -17,7 +17,7 @@ if (isset($_POST['name'])) {
 }
 ?>
     <div class="container mt-5">
-        <form action="../../middleware/user/createUser.php"
+        <form action="../../middleware/service/createService.php"
               method="post"
               class="d-flex flex-column justify-content-center align-items-center mt-3">
             <h3 class="mt-5 mb-4" style="color: #a7d4fd">Добавление</h3>

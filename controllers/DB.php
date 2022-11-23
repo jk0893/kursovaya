@@ -4,7 +4,7 @@ class DB
 {
     protected function connect()
     {
-        return new PDO('mysql:host=localhost;dbname=serving_comp_tech;charset=utf8', 'root', '');
+        return new PDO('mysql:host=localhost; dbname=serving_comp_tech; charset=utf8', 'root', '');
     }
 
     protected function DBAll($query)

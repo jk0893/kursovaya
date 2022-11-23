@@ -74,20 +74,25 @@ header {
     color: #6e9ecb;
 }
 
-#about-us {
+#about-us, #index {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#about-us-body, #index-body{
     border-radius: 10px;
     display: flex;
     height: 15%;
-    left: 25%;
-    top: 75px;
     border-color: #6e9ecb;
     border-width: 3px;
     background: #355e85;
     color: #7d9fbc;
-    max-width: 50%;
+    max-width: 40%;
 }
 
-#about-us p {
+#about-us p, #index p {
     width: 100%;
     color: #a7d4fd;
     align-items: end;
@@ -111,14 +116,22 @@ header {
     align-items: center;
 }
 
-/* */
 .buttons {
     list-style-type: none;
     padding-left: 70px;
     margin-bottom: 0;
 }
 
-/* Вкладка пользователи, добавлен для анимации hover */
+.buttons li {
+    display: inline-block;
+}
+
+.buttons li a {
+    display: inline-block;
+}
+
+
+/* Вкладка пользователи, добавлена для анимации hover */
 .el1, .el2 {
     color: #a7d4fd;
 }
@@ -135,21 +148,16 @@ header {
     border-color: #a7d4fd;
 }
 
+#username, #password{
+    text-align: center;
+}
+
 #username_auth, #password_auth{
     background-color: #a7d4fd;
     color: #355e85;
     border-color: #355e85;
 }
 
-/* */
-.buttons li {
-    display: inline-block;
-}
-
-/* */
-.buttons li a {
-    display: inline-block;
-}
 
 /* */
 .auth {
@@ -231,7 +239,7 @@ header {
     margin: 1%;
     margin-top: 5px;
     line-height: 25px;
-    margin-left: 4px;
+    margin-left: -10%;
 }
 
 .topl .menux a:last-child {
@@ -240,4 +248,8 @@ header {
 
 .topl a:last-child {
     margin-right: 0;
+}
+
+.registration-form{
+    text-align: center;
 }

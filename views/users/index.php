@@ -7,8 +7,7 @@ $db = new User();
         <div class="pages">
             <div class="d-flex">
                 <ul class="data">
-                    <li><a class="btn el2" href="/views/services/create.php">Добавить</a></li>
-                    <li><a class="btn el2" href="/views/services/update.php">Изменить</a></li>
+                    <li><a class="btn el2" href="/views/users/create.php">Добавить</a></li>
                 </ul>
             </div>
         </div>
@@ -19,18 +18,22 @@ foreach ($data as $key => $row) {
     ?>
     <div class="card m-4 shadow" id="cards" style="border-radius: 8px">
         <div class="card-body">
-            <h5 class="card-title" style="color: #a7d4fd"><?php echo $row['username']; ?></h5>
-            <div>
+            <h5 class="card-title mb-2" style="color: #a7d4fd">Пользователь №<?php echo $row['id']?></h5>
+            <div class="mb-1">
+                <span class="card-subtitle" style="color: #83c4ff">Логин: </span>
+                <span class="card-text"><?php echo $row['username']; ?></span>
+            </div>
+            <div class="mb-1">
                 <span class="card-subtitle" style="color: #83c4ff">Пароль: </span>
                 <span class="card-text"><?php echo $row['password']; ?></span>
             </div>
             <div>
                 <span class="card-subtitle" style="color: #83c4ff">Права доступа: </span>
-                <span class="card-text"><?php echo $row['role_id']; ?></span>
+                <span class="card-text"><?php echo $row['role_name']; ?></span>
             </div>
-            <div class="my-2">
+            <div class="wrapper mt-3">
                 <div>
-                    <form action="../../middleware/user/updateUser.php" method="post">
+                    <form action="../../views/users/update.php" method="post">
                         <label>
                             <button class="btn" type="submit" id="submit">Изменить</button>
                         </label>

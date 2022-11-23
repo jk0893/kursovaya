@@ -10,17 +10,17 @@ class roles extends DB
         $username = $req->username;
         $password = $req->password;
         $connect = $this->connect();
-        $sql = $connect->prepare('SELECT * from serving_comp_tech.users where username=:username and password=:password');
+        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password');
         $sql->execute([
             'username' => $username,
-            'password' => $password
+            'password' => $password,
         ]);
         $data = $sql->fetch(PDO::FETCH_OBJ);
         if ($data) {
             session_start();
             $_SESSION['user'] = (object)[
                 'username' => $data->username,
-                'role_id' => $data->role_id
+                'role_id' => $data->role_id,
             ];
         }
     }
@@ -32,11 +32,11 @@ class roles extends DB
         $password = $req->password;
         $role_id = $req->role_id;
         $connect = $this->connect();
-        $sql = $connect->prepare('SELECT * from serving_comp_tech.users where username=:username and password=:password and role_id=:role_id');
+        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password and role_id=:role_id');
         $sql->execute(array(
             'username' => $username,
             'password' => $password,
-            'role_id' => 3
+            'role_id' => $role_id,
         ));
         $data = $sql->fetch(PDO::FETCH_OBJ);
         if ($data) {
@@ -44,23 +44,25 @@ class roles extends DB
                 'message' => "Такой пользователь существует"
             ]);
         }
-        $sql = $connect->prepare("INSERT INTO serving_comp_tech.users(username,password) values (:username,:password)");
+        $sql = $connect->prepare("INSERT INTO users(username,password, role_id) values (:username,:password, :role_id)");
         $sql->execute([
             'username' => $username,
-            'password' => $password
+            'password' => $password,
+            'role_id' => $role_id,
         ]);
-        $sql = $connect->prepare('SELECT * from serving_comp_tech.users where username=:username and password=:password');
+        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password');
         $sql->execute([
             'username' => $username,
-            'role_id' => $data->role_id
+            'password' => $password,
+            'role_id' => $role_id,
         ]);
         $data = $sql->fetch(PDO::FETCH_OBJ);
         if ($data) {
             session_start();
-            $_SESSION['username'] = (object)[
+            $_SESSION['user'] = (object)[
                 'username' => $data->username,
                 'password' => $data->password,
-                'role_id' => $data->role_id
+                'role_id' => $data->role_id,
             ];
             return json_encode([
                 'message' => 'Пользователь добавлен'

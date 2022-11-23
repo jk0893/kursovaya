@@ -37,10 +37,9 @@
             </div>
             <div class="d-flex">
                 <ul class="list buttons">
-                    <li class="list__button"><a class="btn el1" href="/views/users/index.php">Пользователи</a></li>
-                    <li class="list__button"><a class="btn el1" href="/views/services/index.php">Услуги</a></li>
-                    <li class="list__button"><a class="btn el1" href="/views/warehouse/index.php">Склад</a></li>
-                    <li class="list__button"><a class="btn el1" href="../../about.php">О сервисе</a></li>
+                    <li><a class="btn el1" href="/views/users/index.php">Пользователи</a></li>
+                    <li><a class="btn el1" href="/views/services/index.php">Услуги</a></li>
+                    <li><a class="btn el1" href="/views/warehouse/index.php">Склад</a></li>
                 </ul>
             </div>
             <div class="auth">
@@ -58,19 +57,19 @@
                                         </label>
                                     </div>
                                     <div class="mb-1">
-                                        <label for="exampleInputEmail1" style="color:whitesmoke" class="form-label">
+                                        <label for="password_auth" style="color:whitesmoke" class="form-label">
                                             <input type="search" class="form-control" size="15" id="password_auth"
                                                    aria-describedby="password" placeholder="Пароль">
                                         </label>
                                     </div>
-                                    <button type="submit" class="mb-1 btn"
+                                    <button type="submit" class="mb-2 btn"
                                             style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">Отправить
                                     </button>
                                 </form>
                             </div>
                             <div>
                                 <ul>
-                                    <li><a href="/middleware/auth/registration.php">Нет аккаунта?</a></li>
+                                    <li><a href="/views/auth/registration.php">Нет аккаунта?</a></li>
                                 </ul>
                             </div>
                         </div>
