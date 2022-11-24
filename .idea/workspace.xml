@@ -2,76 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Отредактировал внешний вид сайта, улучшил вывод пользователей, появилась функция добавления услуг">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/about-us.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/vk_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/service/createService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/service/deleteService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/service/updateService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/user/createUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/user/deleteUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/user/delete_auth_user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/user/updateUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/warehouse/createWarehouse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/warehouse/deleteWarehouse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/warehouse/updateWarehouse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/auth/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/DB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/service/createService.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/service/createService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/service/updateService.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/service/updateService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/user/createUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/user/createUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/user/deleteUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/user/deleteUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/warehouse/deleteWarehouse.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/warehouse/deleteWarehouse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/services/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/services/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/services/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/warehouse/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/warehouse/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,6 +110,9 @@
       <workItem from="1668790393725" duration="236000" />
       <workItem from="1669200257812" duration="11177000" />
       <workItem from="1669211544184" duration="230000" />
+      <workItem from="1669211831734" duration="187000" />
+      <workItem from="1669219283706" duration="543000" />
+      <workItem from="1669279563112" duration="11658000" />
     </task>
     <task id="LOCAL-00001" summary="main version of website">
       <created>1666738673941</created>
@@ -219,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668790590862</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Отредактировал внешний вид сайта, улучшил вывод пользователей, появилась функция добавления услуг">
+      <created>1669211995049</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669211995049</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -10,12 +10,4 @@ $db->login(json_encode([
 ]));
 
 session_start();
-if($_SESSION['$username']->role_id===3) {
-    header('Location: ../../index.php');
-}
-if($_SESSION['$username']->role_id===2) {
-    header('Location: ../../index.php');
-}
-if($_SESSION['$username']->role_id===1) {
-    header('Location: ../../index.php');
-}
+header('Location: ../../index.php');

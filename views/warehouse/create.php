@@ -1,29 +1,36 @@
 <?php
-require ('../layout/header.php');
-require ($_SERVER['DOCUMENT_ROOT'].'/controllers/Roles.php');
+require('../layout/header.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Warehouse.php');
 ?>
-<div class="container mt-5">
-    <form action="../../middleware/warehouse/createWarehouse.php"
-          method="post"
-          class="d-flex flex-column justify-content-center align-items-center">
-        <h3>Добавление</h3>
-        <div class="col-5">
-            <label for="name">Название</label>
-            <input id="name" name="name" type="text" class="form-control" required>
-        </div>
-        <div class="col-5">
-            <label for="quantity">Количество</label>
-            <input id="quantity" name="quantity" type="number" class="form-control" required>
-        </div>
-        <div class="col-5">
-            <label for="price">Стоимость</label>
-            <input id="price" name="price" type="number" class="form-control" required>
-        </div>
-        <div class="mt-3">
-            <button class="btn btn-primary" type="submit">Отправить</button>
-        </div>
-    </form>
-</div>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <div class="container mt-5">
+        <form action="../../middleware/warehouse/createWarehouse.php"
+              method="post"
+              class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <h3 class="mt-5 mb-4" style="color: #a7d4fd">Добавление</h3>
+            <div class="text-white col-2 mb-3">
+                <label>
+                    <input id="name" name="hardware_name" type="search" class="form-control" placeholder="Название" required>
+                </label>
+            </div>
+            <div class="text-white col-2 mb-3">
+                <label>
+                    <input id="type" name="quantity" type="search" class="form-control" placeholder="Количество" required>
+                </label>
+            </div>
+            <div class="text-white col-2 mb-3">
+                <label>
+                    <input id="price" name="price" type="search" class="form-control"
+                           placeholder="Стоимость" required>
+                </label>
+            </div>
+            <div class="mt-2">
+                <button class="btn btn-primary" id="submit" type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+
 <?php
-require ('../layout/footer.php');
 ?>

@@ -4,6 +4,7 @@ $data = new Services();
 $name = $_POST['name'];
 $type = $_POST['type'];
 $price = $_POST['price'];
+
 $response = $data->createService(json_encode([
     'name' => $name,
     'type' =>  $type,

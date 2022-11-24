@@ -6,4 +6,4 @@ $id = $_POST['id'];
 $res = $db->deleteWarehouse(json_encode([
     'id'=>$id
 ]));
-header('Location: ../views/warehouse/index.php?message='. json_decode($res)->message);
+header('Location: ../../views/warehouse/index.php?message='. json_decode($res)->message);

@@ -32,7 +32,7 @@ class roles extends DB
         $password = $req->password;
         $role_id = $req->role_id;
         $connect = $this->connect();
-        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password and role_id=:role_id');
+        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password and role_id=:role_id;');
         $sql->execute(array(
             'username' => $username,
             'password' => $password,
@@ -44,13 +44,14 @@ class roles extends DB
                 'message' => "Такой пользователь существует"
             ]);
         }
-        $sql = $connect->prepare("INSERT INTO users(username,password, role_id) values (:username,:password, :role_id)");
+        $sql = $connect->prepare("INSERT INTO users(username,password, role_id) values (:username,:password,:role_id);
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM '$username'@'localhost'");
         $sql->execute([
             'username' => $username,
             'password' => $password,
             'role_id' => $role_id,
         ]);
-        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password');
+        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password and role_id=:role_id');
         $sql->execute([
             'username' => $username,
             'password' => $password,

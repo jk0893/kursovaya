@@ -6,4 +6,4 @@ $id = $_POST['id'];
 $res = $db->deleteUser(json_encode([
     'id'=>$id
 ]));
-header('Location: ../views/users/index.php?message='. json_decode($res)->message);
+header('Location: ../../views/users/index.php?message='. json_decode($res)->message);

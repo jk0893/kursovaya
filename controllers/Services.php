@@ -41,17 +41,16 @@ class Services extends DB
     public function updateService($request)
     {
         $req = json_decode($request);
-        $id = $req->id;
         $name = $req->name;
         $type = $req->type;
         $price = $req->price;
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("UPDATE serving_comp_tech.services SET name='{$name}', type='{$type}', price='{$price}' WHERE id={$id} ");
+            $connect->exec("UPDATE services SET name='{$name}', type='{$type}', price='{$price}' WHERE id=" . $req->id);
             $connect->commit();
             return json_encode([
-                'message' => 'Услуга обновлена'
+                'message' => 'Услуга обновлена.'
             ]);
         } catch (PDOException $e) {
             $connect->rollBack();

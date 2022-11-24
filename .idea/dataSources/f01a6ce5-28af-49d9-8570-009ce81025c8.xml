@@ -4,134 +4,125 @@
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
-      <Grants>|root||root|127.0.0.1|ALTER|G
+      <Grants>|root||admin|localhost|ALTER|G
+|root||root|127.0.0.1|ALTER|G
 |root||root|::1|ALTER|G
 |root||root|localhost|ALTER|G
+|root||admin|localhost|ALTER ROUTINE|G
 |root||root|127.0.0.1|ALTER ROUTINE|G
 |root||root|::1|ALTER ROUTINE|G
 |root||root|localhost|ALTER ROUTINE|G
+|root||admin|localhost|CREATE|G
 |root||root|127.0.0.1|CREATE|G
 |root||root|::1|CREATE|G
 |root||root|localhost|CREATE|G
+|root||admin|localhost|CREATE ROUTINE|G
 |root||root|127.0.0.1|CREATE ROUTINE|G
 |root||root|::1|CREATE ROUTINE|G
 |root||root|localhost|CREATE ROUTINE|G
+|root||admin|localhost|CREATE TABLESPACE|G
 |root||root|127.0.0.1|CREATE TABLESPACE|G
 |root||root|::1|CREATE TABLESPACE|G
 |root||root|localhost|CREATE TABLESPACE|G
+|root||admin|localhost|CREATE TEMPORARY TABLES|G
 |root||root|127.0.0.1|CREATE TEMPORARY TABLES|G
 |root||root|::1|CREATE TEMPORARY TABLES|G
 |root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||admin|localhost|CREATE USER|G
 |root||root|127.0.0.1|CREATE USER|G
 |root||root|::1|CREATE USER|G
 |root||root|localhost|CREATE USER|G
+|root||admin|localhost|CREATE VIEW|G
 |root||root|127.0.0.1|CREATE VIEW|G
 |root||root|::1|CREATE VIEW|G
 |root||root|localhost|CREATE VIEW|G
+|root||admin|localhost|DELETE|G
 |root||root|127.0.0.1|DELETE|G
 |root||root|::1|DELETE|G
 |root||root|localhost|DELETE|G
+|root||admin|localhost|DELETE HISTORY|G
 |root||root|127.0.0.1|DELETE HISTORY|G
 |root||root|::1|DELETE HISTORY|G
 |root||root|localhost|DELETE HISTORY|G
+|root||admin|localhost|DROP|G
 |root||root|127.0.0.1|DROP|G
 |root||root|::1|DROP|G
 |root||root|localhost|DROP|G
+|root||admin|localhost|EVENT|G
 |root||root|127.0.0.1|EVENT|G
 |root||root|::1|EVENT|G
 |root||root|localhost|EVENT|G
+|root||admin|localhost|EXECUTE|G
 |root||root|127.0.0.1|EXECUTE|G
 |root||root|::1|EXECUTE|G
 |root||root|localhost|EXECUTE|G
+|root||admin|localhost|FILE|G
 |root||root|127.0.0.1|FILE|G
 |root||root|::1|FILE|G
 |root||root|localhost|FILE|G
+|root||admin|localhost|INDEX|G
 |root||root|127.0.0.1|INDEX|G
 |root||root|::1|INDEX|G
 |root||root|localhost|INDEX|G
+|root||admin|localhost|INSERT|G
 |root||root|127.0.0.1|INSERT|G
 |root||root|::1|INSERT|G
 |root||root|localhost|INSERT|G
+|root||admin|localhost|LOCK TABLES|G
 |root||root|127.0.0.1|LOCK TABLES|G
 |root||root|::1|LOCK TABLES|G
 |root||root|localhost|LOCK TABLES|G
+|root||admin|localhost|PROCESS|G
 |root||root|127.0.0.1|PROCESS|G
 |root||root|::1|PROCESS|G
 |root||root|localhost|PROCESS|G
+|root||admin|localhost|REFERENCES|G
 |root||root|127.0.0.1|REFERENCES|G
 |root||root|::1|REFERENCES|G
 |root||root|localhost|REFERENCES|G
+|root||admin|localhost|RELOAD|G
 |root||root|127.0.0.1|RELOAD|G
 |root||root|::1|RELOAD|G
 |root||root|localhost|RELOAD|G
+|root||admin|localhost|REPLICATION CLIENT|G
 |root||root|127.0.0.1|REPLICATION CLIENT|G
 |root||root|::1|REPLICATION CLIENT|G
 |root||root|localhost|REPLICATION CLIENT|G
+|root||admin|localhost|REPLICATION SLAVE|G
 |root||root|127.0.0.1|REPLICATION SLAVE|G
 |root||root|::1|REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION SLAVE|G
+|root||admin|localhost|SELECT|G
 |root||root|127.0.0.1|SELECT|G
 |root||root|::1|SELECT|G
 |root||root|localhost|SELECT|G
+|root||admin|localhost|SHOW DATABASES|G
 |root||root|127.0.0.1|SHOW DATABASES|G
 |root||root|::1|SHOW DATABASES|G
 |root||root|localhost|SHOW DATABASES|G
+|root||admin|localhost|SHOW VIEW|G
 |root||root|127.0.0.1|SHOW VIEW|G
 |root||root|::1|SHOW VIEW|G
 |root||root|localhost|SHOW VIEW|G
+|root||admin|localhost|SHUTDOWN|G
 |root||root|127.0.0.1|SHUTDOWN|G
 |root||root|::1|SHUTDOWN|G
 |root||root|localhost|SHUTDOWN|G
+|root||admin|localhost|SUPER|G
 |root||root|127.0.0.1|SUPER|G
 |root||root|::1|SUPER|G
 |root||root|localhost|SUPER|G
+|root||admin|localhost|TRIGGER|G
 |root||root|127.0.0.1|TRIGGER|G
 |root||root|::1|TRIGGER|G
 |root||root|localhost|TRIGGER|G
+|root||admin|localhost|UPDATE|G
 |root||root|127.0.0.1|UPDATE|G
 |root||root|::1|UPDATE|G
 |root||root|localhost|UPDATE|G
 |root||root|127.0.0.1|grant option|G
 |root||root|::1|grant option|G
-|root||root|localhost|grant option|G
-phpmyadmin|schema||pma|localhost|DELETE|G
-phpmyadmin|schema||pma|localhost|INSERT|G
-phpmyadmin|schema||pma|localhost|SELECT|G
-phpmyadmin|schema||pma|localhost|UPDATE|G
-test|schema||&apos;&apos;||ALTER|G
-test|schema||&apos;&apos;||CREATE|G
-test|schema||&apos;&apos;||CREATE ROUTINE|G
-test|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
-test|schema||&apos;&apos;||CREATE VIEW|G
-test|schema||&apos;&apos;||DELETE|G
-test|schema||&apos;&apos;||DELETE HISTORY|G
-test|schema||&apos;&apos;||DROP|G
-test|schema||&apos;&apos;||EVENT|G
-test|schema||&apos;&apos;||INDEX|G
-test|schema||&apos;&apos;||INSERT|G
-test|schema||&apos;&apos;||LOCK TABLES|G
-test|schema||&apos;&apos;||REFERENCES|G
-test|schema||&apos;&apos;||SELECT|G
-test|schema||&apos;&apos;||SHOW VIEW|G
-test|schema||&apos;&apos;||TRIGGER|G
-test|schema||&apos;&apos;||UPDATE|G
-test\\_%|schema||&apos;&apos;||ALTER|G
-test\\_%|schema||&apos;&apos;||CREATE|G
-test\\_%|schema||&apos;&apos;||CREATE ROUTINE|G
-test\\_%|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
-test\\_%|schema||&apos;&apos;||CREATE VIEW|G
-test\\_%|schema||&apos;&apos;||DELETE|G
-test\\_%|schema||&apos;&apos;||DELETE HISTORY|G
-test\\_%|schema||&apos;&apos;||DROP|G
-test\\_%|schema||&apos;&apos;||EVENT|G
-test\\_%|schema||&apos;&apos;||INDEX|G
-test\\_%|schema||&apos;&apos;||INSERT|G
-test\\_%|schema||&apos;&apos;||LOCK TABLES|G
-test\\_%|schema||&apos;&apos;||REFERENCES|G
-test\\_%|schema||&apos;&apos;||SELECT|G
-test\\_%|schema||&apos;&apos;||SHOW VIEW|G
-test\\_%|schema||&apos;&apos;||TRIGGER|G
-test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
+|root||root|localhost|grant option|G</Grants>
       <ServerVersion>10.4.24</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
@@ -1153,15 +1144,15 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     <schema id="327" parent="1" name="phpmyadmin">
       <CollationName>utf8_bin</CollationName>
     </schema>
-    <schema id="328" parent="1" name="planetariy">
+    <schema id="328" parent="1" name="serving_comp_tech">
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
-    <schema id="329" parent="1" name="serving_comp_tech">
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </schema>
-    <schema id="330" parent="1" name="test">
+    <schema id="329" parent="1" name="test">
       <CollationName>latin1_swedish_ci</CollationName>
     </schema>
+    <user id="330" parent="1" name="admin">
+      <Host>localhost</Host>
+    </user>
     <user id="331" parent="1" name="pma">
       <Host>localhost</Host>
     </user>
@@ -1569,35 +1560,35 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <System>1</System>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="414" parent="329" name="clients">
+    <table id="414" parent="328" name="clients">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="415" parent="329" name="employee">
+    <table id="415" parent="328" name="employee">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="416" parent="329" name="orders">
+    <table id="416" parent="328" name="orders">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="417" parent="329" name="position">
+    <table id="417" parent="328" name="position">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="418" parent="329" name="roles">
+    <table id="418" parent="328" name="roles">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="419" parent="329" name="services">
+    <table id="419" parent="328" name="services">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="420" parent="329" name="users">
+    <table id="420" parent="328" name="users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="421" parent="329" name="warehouse">
+    <table id="421" parent="328" name="warehouse">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
@@ -5553,7 +5544,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1257" parent="419" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>15</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5579,7 +5570,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="1262" parent="420" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>13</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5604,37 +5595,46 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <RefColNames>id</RefColNames>
       <RefTableName>roles</RefTableName>
     </foreign-key>
-    <index id="1267" parent="420" name="users_roles_id_fk">
+    <index id="1267" parent="420" name="users_username_uindex">
+      <ColNames>username</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="1268" parent="420" name="users_roles_id_fk">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1268" parent="420" name="PRIMARY">
+    <key id="1269" parent="420" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="1269" parent="421" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <key id="1270" parent="420" name="users_username_uindex">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>users_username_uindex</UnderlyingIndexName>
+    </key>
+    <column id="1271" parent="421" name="id">
+      <AutoIncrement>5</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1270" parent="421" name="hardware_name">
+    <column id="1272" parent="421" name="hardware_name">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1271" parent="421" name="quantity">
+    <column id="1273" parent="421" name="quantity">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1272" parent="421" name="price">
+    <column id="1274" parent="421" name="price">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <key id="1273" parent="421" name="PRIMARY">
+    <key id="1275" parent="421" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>

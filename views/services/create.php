@@ -4,18 +4,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
 ?>
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/style.css">
-<?php
-if (isset($_POST['name'])) {
-    $db = new Services();
-    $data = $db->createService(json_encode([
-        'name' => $_POST['name'],
-        'type' => $_POST['type'],
-        'price' => $_POST['price']
-    ]));
-    $message = json_decode($data)->message;
-    echo $message;
-}
-?>
+
     <div class="container mt-5">
         <form action="../../middleware/service/createService.php"
               method="post"
@@ -28,7 +17,7 @@ if (isset($_POST['name'])) {
             </div>
             <div class="text-white col-2 mb-3">
                 <label>
-                <input id="type" name="type" type="search" class="form-control" placeholder="Количество" required>
+                <input id="type" name="type" type="search" class="form-control" placeholder="Тип" required>
                 </label>
             </div>
             <div class="text-white col-2 mb-3">

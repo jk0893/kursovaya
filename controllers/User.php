@@ -11,23 +11,24 @@ class User extends DB
     public function deleteUser($request)
     {
         $req = json_decode($request);
-        return $this->transaction($this->connect(),
-            'DELETE from serving_comp_tech.users where id=' . $req->id,
+        return $this->transaction('DELETE from serving_comp_tech.users where id=' . $req->id,
             'Пользователь удален');
     }
 
     public function createUser($request)
     {
         $req = json_decode($request);
-        $username = $req->name;
+        $username = $req->username;
         $password = $req->password;
+        $role_id = $req->role_id;
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $sql = $connect->prepare('INSERT INTO serving_comp_tech.users (username,password) values (:username,:password);');
+            $sql = $connect->prepare('INSERT INTO serving_comp_tech.users (username,password, role_id) values (:username,:password, :role_id)');
             $sql->execute([
-                'name' => $username,
-                'password' => $password
+                'username' => $username,
+                'password' => $password,
+                'role_id' => $role_id,
             ]);
             $connect->commit();
             return json_encode([
@@ -47,10 +48,11 @@ class User extends DB
         $id = $req->id;
         $username = $req->username;
         $password = $req->password;
+        $role_id = $req->role_id;
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("UPDATE users SET username='{$username}', password='{$password}' WHERE id={$id} ");
+            $connect->exec("UPDATE users SET username='{$username}', password='{$password}', role_id='{$role_id}' WHERE users.id={$id} ");
             $connect->commit();
             return json_encode([
                 'message' => 'Пользователь обновлён'
