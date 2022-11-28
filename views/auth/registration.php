@@ -1,30 +1,26 @@
 <?php
+session_start();
 require('../layout/header.php');
-require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Roles.php');
+if($_SESSION['user']){
+    header('Location: ../../views/auth/lk.php');
+}
 ?>
-<div class="container mt-5">
-    <div class="registration-form mt-5">
-        <form action="../../middleware/auth/registration.php"
-              method="post"
-              class="d-flex flex-column justify-content-center align-items-center">
-            <h3 class="mb-5" style="color:#a7d4fd; font-size: 28px">Регистрация</h3>
-            <div class="text-white col-5 mb-4">
-                <label for="username">
-                <input id="username" name="username" type="text" class="form-control" size="25" pattern="[a-zA-Z0-9]+$" placeholder="Логин"
-                       required>
-                </label>
-            </div>
-            <div class="text-white col-5 mb-3">
-                <label for="password">
-                <input id="password" name="password" type="password" class="form-control" size="25" pattern="[a-zA-Z0-9-]+$" placeholder="Пароль"
-                       required>
-                </label>
-            </div>
-            <div class="mt-3">
-                <button class="btn" id="submit" type="submit">Отправить</button>
-            </div>
-        </form>
-    </div>
-</div>
-<?php
-?>
+
+<form action="../../middleware/auth/registration.php" method="post" enctype="multipart/form-data">
+    <label>Логин:</label>
+    <input type="search" placeholder="Введите логин" name="username">
+    <label>Пароль:</label>
+    <input type="search" placeholder="Введите пароль" name="password">
+    <label>Аватарка:</label>
+    <input type="file" name="avatar">
+    <label>Подтверждение пароля:</label>
+    <input type="search" placeholder="Подтвердите пароль" name="password_confirm">
+    <button type="submit">Зарегистрироваться</button>
+    <p>Уже есть аккаунт? - <a href="auth.php"> Авторизуйтесь!</a></p>
+    <?php
+    if ($_SESSION['message']) {
+        echo '<p class="message"> ' . $_SESSION['message'] . ' </p>';
+        unset($_SESSION['message']);
+    }
+    ?>
+</form>
