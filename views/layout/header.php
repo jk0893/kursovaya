@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])){
+    header('Location: ../../views/auth/lk.php');
+}
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -35,85 +41,56 @@
             <div class="logo">
                 <a class="display-5" href="/index.php"><img src="/img/logo.png" alt="logo" width="50"></a>
             </div>
-            <?php if (isset($_SESSION['user'])) {
-                if ($_GET['role_id'] === 3) { ?>
-                    <div class="d-flex">
-                    <ul class="list buttons">
+            <div class="d-flex">
+                <ul class="list buttons">
                     <li><a class="btn el1" href="/views/services/index.php">Услуги</a></li>
-                <?php } ?>
-                <?php if ($_GET['role_id'] === 2) {?>
                     <li><a class="btn el1" href="/views/warehouse/index.php">Склад</a></li>
-                <?php } ?>
-                <?php if ($_GET['role_id'] === 1) {?>
                     <li><a class="btn el1" href="/views/users/index.php">Пользователи</a></li>
-                <?php } else echo 'Что-то пошло не так...'?>
                 </ul>
-                </div>
-                <div class="auth">
-                    <div class='topl'>
-                        <div class='wrap'>
-                            <a href='#' id='ax1'><img src="/img/user.png" alt="login" width="35"></a>
-                            <div class='menux' id='me1'>
-                                <div>
+            </div>
+            <div class="auth">
+                <div class='topl'>
+                    <div class='wrap'>
+                        <a href='#' id='ax1'><img src="/img/user.png" alt="login" width="35"></a>
+                        <div class='menux' id='me1'>
+                            <div>
+                                <form action="/middleware/auth/auth.php" id="container">
                                     <label class="mt-3"
-                                           style="color:#a7d4fd; font-size: 20px"><?php echo $_GET['username']; ?></label>
+                                           style="color:#a7d4fd; font-size: 20px">Авторизация</label>
                                     <div class="mt-3 mb-1">
-                                        <button type="submit" class="mb-2 btn"
-                                                style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
-                                            Отправить>
-                                        </button>
+                                        <label class="form-label">
+                                            <input type="search" class="form-control" id="username_auth" name="username"
+                                                   aria-describedby="username" placeholder="Логин" size="15">
+                                        </label>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label">
+                                            <input type="search" class="form-control" size="15"
+                                                   id="password_auth" name="password"
+                                                   aria-describedby="password" placeholder="Пароль">
+                                        </label>
                                     </div>
                                     <button type="submit" class="mb-2 btn"
                                             style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
                                         Отправить
                                     </button>
-                                </div>
-                                <div>
-                                    <ul>
-                                        <li><a href="/views/auth/registration.php">Нет аккаунта?</a></li>
-                                    </ul>
-                                </div>
+                                </form>
                             </div>
+                            <div>
+                                <ul>
+                                    <li><a href="/views/auth/registration.php">Нет аккаунта?</a></li>
+                                </ul>
+                            </div>
+                            <?php
+                            if (isset($_SESSION['message'])) {
+                                echo '<p class="message"> ' . $_SESSION['message'] . ' </p>';
+                                unset($_SESSION['message']);
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
-            <?php } else { ?>
-                <div class="auth">
-                    <div class='topl'>
-                        <div class='wrap'>
-                            <a href='#' id='ax1'><img src="/img/user.png" alt="login" width="35"></a>
-                            <div class='menux' id='me1'>
-                                <div>
-                                    <form action="/middleware/auth/auth.php" id="container">
-                                        <label class="mt-3" style="color:#a7d4fd; font-size: 20px">Авторизация</label>
-                                        <div class="mt-3 mb-1">
-                                            <label class="form-label" style="color:whitesmoke">
-                                                <input type="search" name="username" class="form-control" id="username_auth"
-                                                       aria-describedby="username" placeholder="Логин" size="15">
-                                            </label>
-                                        </div>
-                                        <div class="mb-1">
-                                            <label for="password_auth" style="color:whitesmoke" class="form-label">
-                                                <input type="search" name="password" class="form-control" size="15" id="password_auth"
-                                                       aria-describedby="password" placeholder="Пароль">
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="mb-2 btn"
-                                                style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
-                                            Отправить
-                                        </button>
-                                    </form>
-                                </div>
-                                <div>
-                                    <ul>
-                                        <li><a href="/views/auth/registration.php">Нет аккаунта?</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
+            </div>
         </div>
     </div>
 </header>

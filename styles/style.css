@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Сам сайт */
 body {
     position: relative;
@@ -10,6 +16,23 @@ body {
     background: #5D88AC;
 }
 
+/* Шапка */
+header {
+    position: fixed;
+    width: 100%;
+    background: #2B5477;
+    height: 70px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+.sub-header {
+    height: 70px;
+}
+
 #cards {
     border-color: #6e9ecb;
     border-width: 2px;
@@ -17,6 +40,15 @@ body {
     color: #7d9fbc;
     max-width: 17%;
     text-align: center;
+    left: 8%;
+}
+
+#add_button{
+    border-color: #6e9ecb;
+    border-width: 1px;
+    background: #355e85;
+    color: #a7d4fd;
+    padding-bottom: 5%;
 }
 
 #submit {
@@ -35,23 +67,6 @@ tr {
     color: #fff;
 }
 
-.sub-header {
-    height: 70px;
-}
-
-/* Шапка */
-header {
-    position: fixed;
-    width: 100%;
-    background: #2B5477;
-    height: 70px;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
-}
-
 /* */
 .container {
     position: fixed;
@@ -61,6 +76,8 @@ header {
 
 .card{
     text-align: center;
+    display:inline-block;
+    width: 100%;
 }
 
 .card img {
@@ -180,7 +197,7 @@ header {
 /* */
 .data {
     list-style-type: none;
-    padding-left: 1100px;
+    padding-left: 1203px;
     margin-bottom: -20px;
 }
 

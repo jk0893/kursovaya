@@ -4,4 +4,3 @@ unset($_SESSION['user']);
 session_write_close();
 header("Location: ../../index.php");
 exit;
-?>

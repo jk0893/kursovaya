@@ -48,11 +48,10 @@ class User extends DB
         $id = $req->id;
         $username = $req->username;
         $password = $req->password;
-        $role_id = $req->role_id;
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("UPDATE users SET username='{$username}', password='{$password}', role_id='{$role_id}' WHERE users.id={$id} ");
+            $connect->exec("UPDATE users SET username='{$username}', password='{$password}' WHERE id={$id} ");
             $connect->commit();
             return json_encode([
                 'message' => 'Пользователь обновлён'

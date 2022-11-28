@@ -7,7 +7,7 @@ $db = new Services();
         <div class="pages">
             <div class="d-flex">
                 <ul class="data">
-                    <li><a class="btn el2" href="/views/services/create.php">Добавить</a></li>
+                    <li><a class="btn el2" id="add_button" href="/views/services/create.php">Добавить</a></li>
                 </ul>
             </div>
         </div>

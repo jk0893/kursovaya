@@ -23,15 +23,6 @@ foreach ($data as $key => $row) {
                            name="password">
                 </label>
             </div>
-            <div class="mb-3">
-                <span class="card-subtitle" style="color: #83c4ff">Права доступа: </span>
-                <label>
-                    <input class="card-text mb-1"
-                           style="border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85"
-                           value="<?php echo $row['role_id']; ?>"
-                           name="role_id">
-                </label>
-            </div>
             <div class="my-2">
                 <form action="../../middleware/user/updateUser.php" method="post">
                     <label>

@@ -5544,7 +5544,7 @@
       <Primary>1</Primary>
     </key>
     <column id="1257" parent="419" name="id">
-      <AutoIncrement>15</AutoIncrement>
+      <AutoIncrement>16</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5590,51 +5590,55 @@
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="1266" parent="420" name="users_roles_id_fk">
+    <column id="1266" parent="420" name="avatar">
+      <DataType>varchar(250)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="1267" parent="420" name="users_roles_id_fk">
       <ColNames>role_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>roles</RefTableName>
     </foreign-key>
-    <index id="1267" parent="420" name="users_username_uindex">
+    <index id="1268" parent="420" name="users_username_uindex">
       <ColNames>username</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="1268" parent="420" name="users_roles_id_fk">
+    <index id="1269" parent="420" name="users_roles_id_fk">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1269" parent="420" name="PRIMARY">
+    <key id="1270" parent="420" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <key id="1270" parent="420" name="users_username_uindex">
+    <key id="1271" parent="420" name="users_username_uindex">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>users_username_uindex</UnderlyingIndexName>
     </key>
-    <column id="1271" parent="421" name="id">
-      <AutoIncrement>5</AutoIncrement>
+    <column id="1272" parent="421" name="id">
+      <AutoIncrement>7</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="1272" parent="421" name="hardware_name">
+    <column id="1273" parent="421" name="hardware_name">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="1273" parent="421" name="quantity">
+    <column id="1274" parent="421" name="quantity">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="1274" parent="421" name="price">
+    <column id="1275" parent="421" name="price">
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <key id="1275" parent="421" name="PRIMARY">
+    <key id="1276" parent="421" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>

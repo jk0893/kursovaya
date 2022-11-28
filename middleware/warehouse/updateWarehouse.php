@@ -4,6 +4,7 @@ $db = new Warehouse();
 $hardware_name = $_POST['hardware_name'];
 $quantity = $_POST['quantity'];
 $price = $_POST['price'];
+
 $response = $db->updateWarehouse(json_encode([
     'hardware_name'=>$hardware_name,
     'quantity'=>$quantity,
