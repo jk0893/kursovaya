@@ -1,23 +1,24 @@
 <?php
 session_start();
-require_once('../../controllers/DB.php');
-
-$pdo = $this->connect();
+$pdo = new PDO('mysql:host=localhost; dbname=serving_comp_tech; charset=utf8', 'root', '');
 $username = $_POST['username'];
-$password = md5($_POST['password']);
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-$sql = ("SELECT * FROM users WHERE username='$username' AND password='$password'");
-$check_user = $pdo->prepare($sql);
-if (!$check_user) {
-    $_SESSION['message'] = 'Неверные логин или пароль.';
-    header('Location: ../../views/auth/auth.php');
-} else {
-    $user = $check_user->fetchAll(PDO::FETCH_ASSOC);
-    $_SESSION['user'] = [
+$check_user = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+$check_user->execute();
+$check_user = $check_user->fetch();
+if (count($check_user) > 0) {
+    $user = $check_user->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['user']= [
         "id" => $user['id'],
+        "avatar" => $user['avatar'],
         "username" => $user['username'],
         "password" => $user['password'],
-        "avatar" => $user['avatar']
     ];
-    header('Location: ../../views/auth/lk.php');
 }
+else{
+    $_SESSION['message'] = 'Неверный логин или пароль';
+    header('Location: ../../views/auth/auth.php');
+}
+?>
+

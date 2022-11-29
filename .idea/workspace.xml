@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Отредактировал внешний вид сайта, улучшил вывод пользователей, появилась функция добавления услуг">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" afterDir="false" />
+    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Roles.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/warehouse/deleteWarehouse.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/warehouse/deleteWarehouse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/warehouse/updateWarehouse.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/warehouse/updateWarehouse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/user/updateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/user/updateUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/registration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/lk.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/lk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/services/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/services/delete.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/services/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/services/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/delete.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/lk.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/warehouse/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/warehouse/delete.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/warehouse/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/warehouse/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +123,10 @@
       <workItem from="1669301598114" duration="211000" />
       <workItem from="1669545970607" duration="11436000" />
       <workItem from="1669557517767" duration="5074000" />
-      <workItem from="1669607862768" duration="1906000" />
+      <workItem from="1669607862768" duration="1998000" />
+      <workItem from="1669650745494" duration="20336000" />
+      <workItem from="1669671732554" duration="10477000" />
+      <workItem from="1669695484687" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="main version of website">
       <created>1666738673941</created>
@@ -186,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669301650187</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)">
+      <created>1669611156002</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669611156002</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)">
+      <created>1669611175693</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669611175693</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +248,7 @@
     <MESSAGE value="Правил контроллеры, back-end, в основном... Как же я это люблю..." />
     <MESSAGE value="Доработал окно авторизации и регистрации; поработал над страницами склада, пользователей и сервисов; пытался починить контроллеры" />
     <MESSAGE value="Отредактировал внешний вид сайта, улучшил вывод пользователей, появилась функция добавления услуг" />
-    <option name="LAST_COMMIT_MESSAGE" value="Отредактировал внешний вид сайта, улучшил вывод пользователей, появилась функция добавления услуг" />
+    <MESSAGE value="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)" />
   </component>
 </project>

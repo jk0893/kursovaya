@@ -1,5 +1,10 @@
 <?php
-require('../layout/header.php');
+require_once __DIR__ . '/../../middleware/boot.php';
+if (isset($_SESSION['user'])) {
+    require('../../views/layout/header_authed.php');
+} else {
+    require('../../views/layout/header.php');
+}
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Warehouse.php');
 ?>
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">

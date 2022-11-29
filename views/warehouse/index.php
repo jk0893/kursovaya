@@ -1,5 +1,11 @@
 <?php
-require('../layout/header.php');
+session_start();
+require_once __DIR__ . '/../../middleware/boot.php';
+if (isset($_SESSION['user'])) {
+    require('../../views/layout/header_authed.php');
+} else {
+    require('../../views/layout/header.php');
+}
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Warehouse.php');
 $db = new Warehouse();
 ?>

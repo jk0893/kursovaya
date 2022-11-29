@@ -1,5 +1,10 @@
 <?php
-require('../layout/header.php');
+session_start();
+if (isset($_SESSION['user'])) {
+    require('../../views/layout/header_authed.php');
+} else {
+    require('../../views/layout/header.php');
+}
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
 $db = new Services();
 $data = $db->getService();

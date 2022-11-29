@@ -1,9 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['user'])){
-    header('Location: ../../views/auth/lk.php');
-}
-?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -42,10 +36,8 @@ if(isset($_SESSION['user'])){
                 <a class="display-5" href="/index.php"><img src="/img/logo.png" alt="logo" width="50"></a>
             </div>
             <div class="d-flex">
-                <ul class="list buttons">
+                <ul class="buttons">
                     <li><a class="btn el1" href="/views/services/index.php">Услуги</a></li>
-                    <li><a class="btn el1" href="/views/warehouse/index.php">Склад</a></li>
-                    <li><a class="btn el1" href="/views/users/index.php">Пользователи</a></li>
                 </ul>
             </div>
             <div class="auth">
@@ -59,18 +51,28 @@ if(isset($_SESSION['user'])){
                                            style="color:#a7d4fd; font-size: 20px">Авторизация</label>
                                     <div class="mt-3 mb-1">
                                         <label class="form-label">
-                                            <input type="search" class="form-control" id="username_auth" name="username"
-                                                   aria-describedby="username" placeholder="Логин" size="15">
+                                            <input type="search"
+                                                   class="form-control"
+                                                   id="username_auth"
+                                                   name="username"
+                                                   aria-describedby="username"
+                                                   placeholder="Логин"
+                                                   size="15">
                                         </label>
                                     </div>
                                     <div class="mb-1">
                                         <label class="form-label">
-                                            <input type="search" class="form-control" size="15"
-                                                   id="password_auth" name="password"
-                                                   aria-describedby="password" placeholder="Пароль">
+                                            <input type="search"
+                                                   class="form-control"
+                                                   size="15"
+                                                   id="password_auth"
+                                                   name="password"
+                                                   aria-describedby="password"
+                                                   placeholder="Пароль">
                                         </label>
                                     </div>
-                                    <button type="submit" class="mb-2 btn"
+                                    <button type="submit"
+                                            class="mb-2 btn"
                                             style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
                                         Отправить
                                     </button>

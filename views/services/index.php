@@ -1,5 +1,10 @@
 <?php
-require('../layout/header.php');
+session_start();
+if (isset($_SESSION['user'])) {
+    require('../layout/header_authed.php');
+} else {
+    require('../layout/header.php');
+}
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
 $db = new Services();
 ?>
@@ -39,7 +44,10 @@ foreach ($data as $key => $row) {
                     <form action="../../middleware/service/deleteService.php" method="post">
                         <label>
                             <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden>
-                            <button class="btn" type="submit" id="submit" onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">Удалить</button>
+                            <button class="btn" type="submit" id="submit"
+                                    onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">
+                                Удалить
+                            </button>
                         </label>
                     </form>
                 </div>
@@ -47,5 +55,3 @@ foreach ($data as $key => $row) {
         </div>
     </div>
 <?php } ?>
-<?php
-?>
