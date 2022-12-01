@@ -6,7 +6,6 @@ if (isset($_SESSION['user'])) {
 else{
     require('../../views/layout/header.php');
 }
-require_once __DIR__ . '/../../middleware/boot.php';
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 $db = new User();
 ?>
@@ -23,7 +22,7 @@ $db = new User();
 $data = $db->getUser();
 foreach ($data as $key => $row) {
     ?>
-    <div class="card m-4 shadow" id="cards" style="border-radius: 8px">
+    <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
         <div class="card-body">
             <h5 class="card-title mb-2" style="color: #a7d4fd">Пользователь №<?php echo $row['id'] ?></h5>
             <div class="mb-1">
@@ -40,7 +39,7 @@ foreach ($data as $key => $row) {
             </div>
             <div class="wrapper mt-3">
                 <div>
-                    <form action="../../views/users/update.php" method="post">
+                    <form action="../../views/users/update.php?id=<?php echo $row['id'] ?>" method="post">
                         <label>
                             <button class="btn" type="submit" id="submit">Изменить</button>
                         </label>

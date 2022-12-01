@@ -1,3 +1,5 @@
+<?php
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -46,18 +48,19 @@
                         <a href='#' id='ax1'><img src="/img/user.png" alt="login" width="35"></a>
                         <div class='menux' id='me1'>
                             <div>
-                                <form action="/middleware/auth/auth.php" id="container">
+                                <form action="/middleware/auth/auth.php" method="post" id="container">
                                     <label class="mt-3"
                                            style="color:#a7d4fd; font-size: 20px">Авторизация</label>
                                     <div class="mt-3 mb-1">
                                         <label class="form-label">
                                             <input type="search"
                                                    class="form-control"
-                                                   id="username_auth"
+                                                   id="auth"
                                                    name="username"
                                                    aria-describedby="username"
                                                    placeholder="Логин"
-                                                   size="15">
+                                                   size="15"
+                                                   required>
                                         </label>
                                     </div>
                                     <div class="mb-1">
@@ -65,17 +68,14 @@
                                             <input type="search"
                                                    class="form-control"
                                                    size="15"
-                                                   id="password_auth"
+                                                   id="auth"
                                                    name="password"
                                                    aria-describedby="password"
-                                                   placeholder="Пароль">
+                                                   placeholder="Пароль"
+                                                   required>
                                         </label>
                                     </div>
-                                    <button type="submit"
-                                            class="mb-2 btn"
-                                            style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
-                                        Отправить
-                                    </button>
+                                    <button type="submit" class="mb-2 btn" style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">Отправить</button>
                                 </form>
                             </div>
                             <div>
@@ -83,12 +83,6 @@
                                     <li><a href="/views/auth/registration.php">Нет аккаунта?</a></li>
                                 </ul>
                             </div>
-                            <?php
-                            if (isset($_SESSION['message'])) {
-                                echo '<p class="message"> ' . $_SESSION['message'] . ' </p>';
-                                unset($_SESSION['message']);
-                            }
-                            ?>
                         </div>
                     </div>
                 </div>

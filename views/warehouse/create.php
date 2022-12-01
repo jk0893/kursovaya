@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/../../middleware/boot.php';
 if (isset($_SESSION['user'])) {
     require('../../views/layout/header_authed.php');
 } else {

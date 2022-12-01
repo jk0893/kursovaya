@@ -1,3 +1,5 @@
+<?php
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -29,7 +31,7 @@
                 <div class="d-flex">
                     <div class="header_authed">
                         <form action="../../middleware/auth/logout.php" method="post">
-                            <a href="../../views/auth/lk.php"><img style="transform: translate(-15px, 0);" src="<?= $_SESSION['user']['avatar'] ?>" alt="avatar" width="40"></a>
+                            <a href="../../views/auth/lk.php"><img style="transform: translate(-15px, 0);" src="<?= $_SESSION['user']->avatar ?>" alt="avatar" width="40"></a>
                             <button type="submit" class="btn"
                                     style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">Выйти
                             </button>

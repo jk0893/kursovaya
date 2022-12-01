@@ -1,31 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)">
+    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/DB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/user/delete_auth_user.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/user/updateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/user/updateUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669660408user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669660432user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669660577user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669664866046MeTWPh_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669666147-lDY9eEAgBA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669676843o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669676866o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669676889o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669676902o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669676922o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669676953o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669676962o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669677001o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669677098o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669677119o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669677123o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669677137o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669677140o5skcCvsjOs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/16696810699F9iXVMpISQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/1669681223jp2fHtui2_I.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/user.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/auth/lk.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/lk.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/services/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/services/delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/header_authed.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header_authed.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/services/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/services/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/delete.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/users/lk.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/warehouse/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/warehouse/delete.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/warehouse/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/warehouse/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/update.php" afterDir="false" />
     </list>
@@ -127,6 +147,8 @@
       <workItem from="1669650745494" duration="20336000" />
       <workItem from="1669671732554" duration="10477000" />
       <workItem from="1669695484687" duration="1149000" />
+      <workItem from="1669704286688" duration="782000" />
+      <workItem from="1669831605657" duration="23455000" />
     </task>
     <task id="LOCAL-00001" summary="main version of website">
       <created>1666738673941</created>
@@ -212,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669611175693</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1">
+      <created>1669704444870</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669704444870</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +278,7 @@
     <MESSAGE value="Доработал окно авторизации и регистрации; поработал над страницами склада, пользователей и сервисов; пытался починить контроллеры" />
     <MESSAGE value="Отредактировал внешний вид сайта, улучшил вывод пользователей, появилась функция добавления услуг" />
     <MESSAGE value="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>

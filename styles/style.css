@@ -39,13 +39,15 @@ header {
 }
 
 #cards {
+    left: 1%;
+    transform: translatey(5%);
+    margin: auto;
+    max-width: 17%;
     border-color: #6e9ecb;
     border-width: 2px;
-    background: #355e85;
     color: #7d9fbc;
-    max-width: 17%;
-    text-align: center;
-    left: 8%;
+    background: #355e85;
+    border-radius: 8px;
 }
 
 #add_button{
@@ -108,6 +110,17 @@ table {
     background: #355e85;
     color: #7d9fbc;
     max-width: 40%;
+}
+
+#index-body-lk{
+    border-radius: 10px;
+    display: flex;
+    max-height: 100%;
+    border-color: #6e9ecb;
+    border-width: 3px;
+    background: #355e85;
+    color: #7d9fbc;
+    max-width: 70%;
 }
 
 #index-body-auth{
@@ -187,7 +200,7 @@ table {
     text-align: center;
 }
 
-#username_auth, #password_auth{
+#auth{
     background-color: #a7d4fd;
     color: #355e85;
     border-color: #355e85;

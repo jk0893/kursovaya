@@ -20,6 +20,12 @@ else{
 </head>
 <link rel="stylesheet" href="styles/style.css">
 <body>
+<?php
+if (isset($_SESSION['message'])) {
+    echo '<p class="message" style="color:#a7d4fd; top: 50%"> ' . $_SESSION['message'] . ' </p>';
+    unset($_SESSION['message']);
+}
+?>
 <div id="index">
     <div class="card" id="index-body">
         <div>

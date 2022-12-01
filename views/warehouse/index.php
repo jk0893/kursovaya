@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once __DIR__ . '/../../middleware/boot.php';
 if (isset($_SESSION['user'])) {
     require('../../views/layout/header_authed.php');
 } else {
@@ -20,7 +19,7 @@ $db = new Warehouse();
 $data = $db->getWarehouse();
 foreach ($data as $key => $row) {
     ?>
-    <div class="card m-4 shadow" id="cards" style="border-radius: 8px">
+    <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
         <div class="card-body">
             <h5 class="card-title mb-2" style="color: #a7d4fd"><?php echo $row['hardware_name']; ?></h5>
             <div class="mb-1">

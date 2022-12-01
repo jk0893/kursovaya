@@ -1,21 +1,28 @@
 <?php
-session_start();
-$pdo = new PDO('mysql:host=localhost; dbname=serving_comp_tech; charset=utf8', 'root', '');
+require_once('../../controllers/Roles.php');
+$db = new Roles();
 $username = $_POST['username'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$password = $_POST['password'];
 $password_confirm = $_POST['password_confirm'];
+$avatar=$_FILES['avatar'];
+$role_id = 3;
+
 if ($password === $password_confirm) {
-    $path = 'uploads/' . time() . $_FILES['avatar']['name'];
-    if (!move_uploaded_file($_FILES['avatar']['tmp_name'], '../../' . $path)) {
-        $_SESSION['message'] = 'Ошибка при загрузке изображения';
+    $path='uploads/' . time() . $_FILES['avatar']['name'];
+    if (!move_uploaded_file($_FILES['avatar']['tmp_name'], '../../' . $path)){
+        $_SESSION['message'] = 'Ошибка при загрузке картинки';
         header('Location: ../../views/auth/registration.php');
     }
-    $result = $pdo->query("INSERT INTO users (id, username, password, role_id, avatar) VALUES (NULL, '$username', '$password', '', '$path')");
-    $_SESSION['message'] = 'Регистрация прошла успешно.';
-    header('Location: ../../index.php');
+    $response = $db->registration(json_encode([
+        'username' => $username,
+        'password' => hash('sha256',$password),
+        'role_id'=>$role_id,
+        'avatar'=>$path
+    ]));
+    echo $response;
+    $_SESSION['message'] = 'регистрация прошла успешно!';
+    header('Location: ../../views/auth/auth.php');
+}else{
+    $_SESSION['message'] = 'Пароли не совпадают';
+    header('Location: ../auth/registration.php');
 }
-else{
-    $_SESSION['message']='Пароли не совпадают';
-    header('Location: ../../views/auth/registration.php');
-}
-?>

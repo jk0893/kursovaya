@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/../../middleware/boot.php';
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 ?>
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">

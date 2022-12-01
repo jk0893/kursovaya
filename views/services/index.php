@@ -21,7 +21,7 @@ $db = new Services();
 $data = $db->getService();
 foreach ($data as $key => $row) {
     ?>
-    <div class="card m-4 shadow" id="cards" style="border-radius: 8px">
+    <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
         <div class="card-body">
             <h5 class="card-title" style="color: #a7d4fd"><?php echo $row['name']; ?></h5>
             <div class="m-1">

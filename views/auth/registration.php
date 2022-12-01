@@ -1,7 +1,10 @@
 <?php
-require('../../views/layout/header.php');
-if(isset($_SESSION['user'])){
+session_start();
+if (isset($_SESSION['user'])) {
+    require('../../views/layout/header_authed.php');
     header('Location: ../../views/auth/lk.php');
+}else{
+    require('../../views/layout/header.php');
 }
 ?>
 
@@ -17,11 +20,12 @@ if(isset($_SESSION['user'])){
                         <label class="form-label">
                             <input type="search"
                                    class="form-control"
-                                   id="username_auth"
+                                   id="auth"
                                    name="username"
                                    aria-describedby="username"
                                    placeholder="Логин"
-                                   size="25">
+                                   size="25"
+                                   required>
                         </label>
                     </div>
                     <div class="mb-2">
@@ -29,10 +33,23 @@ if(isset($_SESSION['user'])){
                             <input type="search"
                                    class="form-control"
                                    size="25"
-                                   id="password_auth"
+                                   id="auth"
                                    name="password"
                                    aria-describedby="password"
-                                   placeholder="Пароль">
+                                   placeholder="Пароль"
+                                   required>
+                        </label>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">
+                            <input type="search"
+                                   class="form-control"
+                                   size="25"
+                                   id="auth"
+                                   name="password_confirm"
+                                   aria-describedby="password_confirm"
+                                   placeholder="Подтверждение пароля"
+                                   required>
                         </label>
                     </div>
                     <div class="mb-2">
@@ -41,7 +58,8 @@ if(isset($_SESSION['user'])){
                                    class="form-control"
                                    name="avatar"
                                    aria-describedby="avatar"
-                                   placeholder="Загрузить аватарку">
+                                   placeholder="Загрузить аватарку"
+                                   required>
                         </label>
                     </div>
                     <button type="submit"

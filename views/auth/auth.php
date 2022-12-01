@@ -2,12 +2,9 @@
 session_start();
 if (isset($_SESSION['user'])) {
     require('../../views/layout/header_authed.php');
-} else {
+    header('Location: ../../views/auth/lk.php');
+}else{
     require('../../views/layout/header.php');
-}
-if (check_auth()) {
-    header('Location: ../../views/auth/auth.php');
-    die;
 }
 ?>
 <body>
@@ -22,11 +19,12 @@ if (check_auth()) {
                         <label class="form-label">
                             <input type="search"
                                    class="form-control"
-                                   id="username_auth"
+                                   id="auth"
                                    name="username"
                                    aria-describedby="username"
                                    placeholder="Логин"
-                                   size="25">
+                                   size="25"
+                                   required>
                         </label>
                     </div>
                     <div class="mb-2">
@@ -34,22 +32,22 @@ if (check_auth()) {
                             <input type="search"
                                    class="form-control"
                                    size="25"
-                                   id="password_auth"
+                                   id="auth"
                                    name="password"
                                    aria-describedby="password"
-                                   placeholder="Пароль">
+                                   placeholder="Пароль"
+                                   required>
                         </label>
                     </div>
-                    <button type="submit"
-                            class="mb-1 mt-3 btn"
-                            style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
-                        Отправить
+                    <button type="submit" class="mb-1 mt-3 btn"
+                            style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">Отправить
                     </button>
                 </form>
             </div>
             <div style="transform: translate(-12.5px, 8px);">
                 <ul>
-                    <li>Нет аккаунта? - <a style="text-decoration: none; color:#a7d4fd" href="/views/auth/registration.php">Зарегистрируйся!</a></li>
+                    <li>Нет аккаунта? - <a style="text-decoration: none; color:#a7d4fd"
+                                           href="/views/auth/registration.php">Зарегистрируйся!</a></li>
                 </ul>
             </div>
             <?php

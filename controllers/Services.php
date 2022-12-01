@@ -5,7 +5,7 @@ class Services extends DB
 {
     public function getService()
     {
-        return $this->DBAll('SELECT * from serving_comp_tech.services');
+        return $this->DBAll('SELECT * from services');
     }
 
     public function createService($request)
@@ -17,10 +17,33 @@ class Services extends DB
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("INSERT INTO serving_comp_tech.services(name,type,price) values ('{$name}','{$type}','{$price}')");
+            $connect->exec("INSERT INTO services(name,type,price) values ('{$name}','{$type}','{$price}')");
             $connect->commit();
             return json_encode([
                 'message' => 'Услуга добавлена'
+            ]);
+        } catch (PDOException $e) {
+            $connect->rollBack();
+            return json_encode([
+                'message' => $e->getMessage()
+            ]);
+        }
+    }
+
+    public function updateService($request)
+    {
+        $req = json_decode($request);
+        $id = $req->id;
+        $name = $req->name;
+        $type = $req->type;
+        $price = $req->price;
+        $connect = $this->connect();
+        try {
+            $connect->beginTransaction();
+            $connect->exec("UPDATE services SET name='{$name}', type='{$type}', price='{$price}' WHERE id='{$id}'");
+            $connect->commit();
+            return json_encode([
+                'message' => 'Услуга обновлена.'
             ]);
         } catch (PDOException $e) {
             $connect->rollBack();
@@ -34,29 +57,7 @@ class Services extends DB
     {
         $req = json_decode($request);
         return $this->transaction(
-            'DELETE FROM serving_comp_tech.services WHERE id=' . $req->id,
+            'DELETE FROM services WHERE id=' . $req->id,
             'Услуга удалена.');
-    }
-
-    public function updateService($request)
-    {
-        $req = json_decode($request);
-        $name = $req->name;
-        $type = $req->type;
-        $price = $req->price;
-        $connect = $this->connect();
-        try {
-            $connect->beginTransaction();
-            $connect->exec("UPDATE services SET name='{$name}', type='{$type}', price='{$price}' WHERE id=" . $req->id);
-            $connect->commit();
-            return json_encode([
-                'message' => 'Услуга обновлена.'
-            ]);
-        } catch (PDOException $e) {
-            $connect->rollBack();
-            return json_encode([
-                'message' => $e->getMessage()
-            ]);
-        }
     }
 }
