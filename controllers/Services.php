@@ -40,10 +40,10 @@ class Services extends DB
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("UPDATE services SET name='{$name}', type='{$type}', price='{$price}' WHERE id='{$id}'");
+            $connect->exec("UPDATE services SET name = '{$name}', type = '{$type}', price = '{$price}' WHERE id = '{$id}'");
             $connect->commit();
             return json_encode([
-                'message' => 'Услуга обновлена.'
+                'message' => 'Услуга обновлена'
             ]);
         } catch (PDOException $e) {
             $connect->rollBack();
@@ -57,7 +57,7 @@ class Services extends DB
     {
         $req = json_decode($request);
         return $this->transaction(
-            'DELETE FROM services WHERE id=' . $req->id,
+            "DELETE FROM services WHERE id=" . $req->id,
             'Услуга удалена.');
     }
 }

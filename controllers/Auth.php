@@ -2,9 +2,8 @@
 
 require('DB.php');
 
-class roles extends DB
+class Auth extends DB
 {
-
     public function login($request)
     {
         $req = json_decode($request);
@@ -20,7 +19,10 @@ class roles extends DB
         if ($data) {
             session_start();
             $_SESSION['user'] = (object)[
+                'id' => $data->id,
                 'username' => $data->username,
+                'avatar'=> $data->avatar,
+                'role_id'=> $data->role_id
             ];
         }
     }
@@ -58,14 +60,14 @@ class roles extends DB
             'role_id' => $role_id,
             'avatar' => $avatar
         ]);
-        $data = $sql->fetch();
+        $data = $sql->fetch(PDO::FETCH_OBJ);
         if ($data) {
-            $_SESSION['user'] = array([
+            $_SESSION['user'] = (object)[
                 'username' => $data->username,
                 'password' => $data->password,
                 'role_id' => $data->role_id,
                 'avatar' => $data->path
-            ]);
+            ];
             return json_encode([
                 'message' => 'Пользователь добавлен'
             ]);

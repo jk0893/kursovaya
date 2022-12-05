@@ -6,19 +6,17 @@ if (isset($_SESSION['user'])) {
 else{
     header('Location: ../../views/auth/auth.php');
 }
+$user_id = $_SESSION['user']->id
 ?>
 
 <body>
 <div style="text-align: center; padding-top: 35px; margin-bottom: -35px; color: #2B5477;">
-    <h1>Добро пожаловать,(<strike>Лучший пользователь</strike>) 👑<?= $_SESSION['user']->username ?>👑!</h1>
+    <h1>Добро пожаловать, <?= $_SESSION['user']->username ?>!</h1>
 </div>
 <div id="index">
     <div class="card" id="index-body-lk">
-        <div>
-            <img src="<?= $_SESSION['user']->avatar ?>" class="card-img-top mb-3" alt="Здесь должна быть аватарка, но по какой-то причине она не работает" style="border-radius: 8px">
-        </div>
-        <h3 class="card-title mb-5" style="color: #abd7ff;">Дополнительная информация:</h3>
-        <form class="row align-items-center" action="../../middleware/clients/createClient.php" method="post" style="text-align: center">
+        <h3 class="card-title my-4 mb-4" style="color: #abd7ff;">Дополнительная информация:</h3>
+        <form class="d-flex flex-column justify-content-center align-items-center" action="../../middleware/clients/createClient.php" method="post" style="text-align: center">
             <label style="color: #abd7ff;">Фамилия:
                 <input type="text" class="mb-3" alt="" name="first_name" size="35" style="background: #96C9FF;border-radius: 8px; color: #112A46; padding-top:5px;" placeholder="Фамилия">
             </label>
@@ -40,6 +38,7 @@ else{
             <label style="color: #abd7ff;">Адрес:
                 <input type="text" maxlength="150" class="mb-2" alt="" size="35" name="address" style="background: #96C9FF;border-radius: 8px; color: #112A46; padding-top:5px;" placeholder="Адрес">
             </label>
+            <input type="hidden" value="<?php echo $user_id ?>">
             <div>
                 <button class="btn my-2" id="submit" type="submit">Сохранить</button>
             </div>

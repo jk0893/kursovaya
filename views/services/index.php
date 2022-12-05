@@ -33,24 +33,29 @@ foreach ($data as $key => $row) {
                 <span class="card-text"><?php echo $row['price']; ?></span>
             </div>
             <div class="wrapper mt-3">
-                <div>
-                    <form action="../../views/services/update.php" method="post">
-                        <label>
-                            <button class="btn" type="submit" id="submit">Изменить</button>
-                        </label>
-                    </form>
-                </div>
-                <div>
-                    <form action="../../middleware/service/deleteService.php" method="post">
-                        <label>
-                            <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden>
-                            <button class="btn" type="submit" id="submit"
-                                    onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">
-                                Удалить
-                            </button>
-                        </label>
-                    </form>
-                </div>
+                <?php
+                if (isset($_SESSION['user'])) {
+                    if ($_SESSION['user']->role_id == 1 || $_SESSION['user']->role_id == 2) { ?>
+                        <div>
+                            <form action="../../views/services/update.php" method="post">
+                                <label>
+                                    <button class="btn" type="submit" id="submit">Изменить</button>
+                                </label>
+                            </form>
+                        </div>
+                        <div>
+                            <form action="../../middleware/service/deleteService.php" method="post">
+                                <label>
+                                    <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden required>
+                                    <button class="btn" type="submit" id="submit"
+                                            onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">
+                                        Удалить
+                                    </button>
+                                </label>
+                            </form>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
             </div>
         </div>
     </div>

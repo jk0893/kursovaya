@@ -5,20 +5,20 @@ if (isset($_SESSION['user'])) {
 } else {
     require('../layout/header.php');
 }
-require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Clients.php');
-$db = new Clients();
+require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Employee.php');
+$db = new Employee();
 ?>
     <div class="buttons">
         <div class="pages">
             <div class="d-flex">
                 <ul class="data">
-                    <li><a class="btn el2" id="add_button" href="/views/clients/create.php">Добавить</a></li>
+                    <li><a class="btn el2" id="add_button" href="/views/employee/create.php">Добавить</a></li>
                 </ul>
             </div>
         </div>
     </div>
 <?php
-$data = $db->getClients();
+$data = $db->getEmployee();
 foreach ($data as $key => $row) {
     ?>
     <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
@@ -48,27 +48,23 @@ foreach ($data as $key => $row) {
                 <span class="card-text"><?php echo $row['phone_number']; ?></span>
             </div>
             <div class="m-1">
-                <span class="card-subtitle" style="color: #83c4ff">Адрес: </span>
-                <span class="card-text"><?php echo $row['address']; ?></span>
-            </div>
-            <div class="m-1">
                 <span class="card-subtitle" style="color: #83c4ff">ID пользователя: </span>
                 <span class="card-text"><?php echo $row['user_id']; ?></span>
             </div>
             <div class="wrapper mt-3">
                 <div>
-                    <form action="../../views/clients/update.php" method="post">
+                    <form action="../../views/employee/update.php" method="post">
                         <label>
                             <button class="btn" type="submit" id="submit">Изменить</button>
                         </label>
                     </form>
                 </div>
                 <div>
-                    <form action="../../middleware/clients/deleteClient.php" method="post">
+                    <form action="../../middleware/employee/deleteEmployee.php" method="post">
                         <label>
                             <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden required>
                             <button class="btn" type="submit" id="submit"
-                                    onclick="return confirm('Вы действительно хотите удалить данного клиента?');">
+                                    onclick="return confirm('Вы действительно хотите удалить данного сотрудника?');">
                                 Удалить
                             </button>
                         </label>

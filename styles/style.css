@@ -34,8 +34,7 @@ header {
 }
 
 .header_authed{
-    white-space: nowrap;
-    margin-left: 50%;
+    margin-left: 30%;
 }
 
 #cards {
@@ -56,6 +55,7 @@ header {
     background: #355e85;
     color: #a7d4fd;
     padding-bottom: 5%;
+    transform: translateY(4px);
 }
 
 #submit {
@@ -81,6 +81,10 @@ table {
     text-align: center;
     display:inline-block;
     width: 100%;
+}
+
+img {
+    object-fit: cover;
 }
 
 .card img {
@@ -135,8 +139,15 @@ table {
     max-width: 25%;
 }
 
-.input{
-    width:75%;
+input{
+    background: #96C9FF;
+    border-radius: 8px;
+    color: #112A46;
+    padding-top:5px;
+}
+
+input::placeholder {
+    color: #254467;
 }
 
 #about-us p, #index p {
