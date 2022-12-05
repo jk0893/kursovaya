@@ -9,13 +9,13 @@ if (isset($_SESSION['user'])) {
 ?>
 
 <body>
-<div id="index" style="transform: translateY(-35px)">
+<div id="index" >
     <div class="card auth" id="index-body-auth">
         <div class="card-body">
             <div style="border-radius: 8px">
                 <form action="/middleware/auth/registration.php" method="post" enctype="multipart/form-data">
                     <label class="card-title mt-3"
-                           style="color:#a7d4fd; font-size: 28px">Регистрация</label>
+                           style="color:#a7d4fd; font-size: 36px">Регистрация</label>
                     <div class="mt-3 mb-2">
                         <label class="form-label">
                             <input type="search"
@@ -24,15 +24,15 @@ if (isset($_SESSION['user'])) {
                                    name="username"
                                    aria-describedby="username"
                                    placeholder="Логин"
-                                   size="25"
+                                   size="40"
                                    required>
                         </label>
                     </div>
                     <div class="mb-2">
                         <label class="form-label">
-                            <input type="search"
+                            <input type="password"
                                    class="form-control"
-                                   size="25"
+                                   size="40"
                                    id="auth"
                                    name="password"
                                    aria-describedby="password"
@@ -42,9 +42,9 @@ if (isset($_SESSION['user'])) {
                     </div>
                     <div class="mb-2">
                         <label class="form-label">
-                            <input type="search"
+                            <input type="password"
                                    class="form-control"
-                                   size="25"
+                                   size="40"
                                    id="auth"
                                    name="password_confirm"
                                    aria-describedby="password_confirm"
@@ -53,19 +53,22 @@ if (isset($_SESSION['user'])) {
                         </label>
                     </div>
                     <div class="mb-2">
-                        <label class="form-label input">
+                        <label class="form-label input" for="files">
                             <input type="file"
                                    class="form-control"
                                    name="avatar"
+                                   id="auth"
+                                   accept="image/*"
+                                   size="40"
                                    aria-describedby="avatar"
                                    placeholder="Загрузить аватарку"
                                    required>
                         </label>
                     </div>
                     <button type="submit"
-                            class="mb-1 mt-3 btn"
+                            class="mb-3 mt-1 btn"
                             style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
-                        Отправить
+                        Зарегистрироваться
                     </button>
                 </form>
             </div>

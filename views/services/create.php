@@ -1,9 +1,11 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 2) {
+        header('Location: index.php');
+    }
     require('../../views/layout/header_authed.php');
-}
-else{
+} else {
     require('../../views/layout/header.php');
 }
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
@@ -23,7 +25,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
             </div>
             <div class="text-white col-2 mb-3">
                 <label>
-                <input id="type" name="type" type="search" class="form-control" placeholder="Тип" required>
+                    <input id="type" name="type" type="search" class="form-control" placeholder="Тип" required>
                 </label>
             </div>
             <div class="text-white col-2 mb-3">

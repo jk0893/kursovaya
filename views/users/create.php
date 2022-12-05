@@ -1,4 +1,13 @@
 <?php
+session_start();
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 1) {
+        header('Location:../../index.php');
+    }
+    require('../../views/layout/header_authed.php');
+} else {
+    require('../../views/layout/header.php');
+}
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 ?>
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">

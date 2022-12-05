@@ -1,6 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 2) {
+        header('Location:../../index.php');
+    }
     require('../../views/layout/header_authed.php');
 } else {
     require('../../views/layout/header.php');
@@ -40,7 +43,7 @@ foreach ($data as $key => $row) {
                 </div>
                 <div class="my-2">
                     <label for="id">
-                        <button class="btn" type="submit" id="submit">Изменить</button>
+                        <button class="btn" type="submit" id="submit" onclick="return confirm('Вы действительно хотите изменить данный товар?');">Изменить</button>
                     </label>
                 </div>
             </div>

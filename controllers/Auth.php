@@ -10,7 +10,7 @@ class Auth extends DB
         $username = $req->username;
         $password = $req->password;
         $connect = $this->connect();
-        $sql = $connect->prepare('SELECT * from users where username=:username and password=:password');
+        $sql = $connect->prepare('SELECT users.id,username,password,role_id,avatar, role_name from users,roles where username=:username and password=:password and role_id=roles.id');
         $sql->execute([
             'username' => $username,
             'password' => $password,
@@ -21,8 +21,9 @@ class Auth extends DB
             $_SESSION['user'] = (object)[
                 'id' => $data->id,
                 'username' => $data->username,
-                'avatar'=> $data->avatar,
-                'role_id'=> $data->role_id
+                'avatar' => $data->avatar,
+                'role_id' => $data->role_id,
+                'role_name'=>$data->role_name
             ];
         }
     }
@@ -66,11 +67,12 @@ class Auth extends DB
                 'username' => $data->username,
                 'password' => $data->password,
                 'role_id' => $data->role_id,
-                'avatar' => $data->path
+                'avatar' => $data->avatar
             ];
             return json_encode([
                 'message' => 'Пользователь добавлен'
             ]);
         }
+
     }
 }

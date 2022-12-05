@@ -1,6 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 1) {
+        header('Location:../../index.php');
+    }
     require('../layout/header_authed.php');
 } else {
     require('../layout/header.php');
@@ -23,6 +26,7 @@ foreach ($data as $key => $row) {
     ?>
     <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
         <div class="card-body">
+            <h5 class="card-title mb-2" style="color: #a7d4fd">Сотрудник №<?php echo $row['id'] ?></h5>
             <div class="m-1">
                 <span class="card-subtitle" style="color: #83c4ff">Фамилия: </span>
                 <span class="card-text"><?php echo $row['last_name']; ?></span>
@@ -48,8 +52,8 @@ foreach ($data as $key => $row) {
                 <span class="card-text"><?php echo $row['phone_number']; ?></span>
             </div>
             <div class="m-1">
-                <span class="card-subtitle" style="color: #83c4ff">ID пользователя: </span>
-                <span class="card-text"><?php echo $row['user_id']; ?></span>
+                <span class="card-subtitle" style="color: #83c4ff">Должность: </span>
+                <span class="card-text"><?php echo $row['name'] ?></span>
             </div>
             <div class="wrapper mt-3">
                 <div>

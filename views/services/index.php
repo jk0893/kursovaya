@@ -8,15 +8,20 @@ if (isset($_SESSION['user'])) {
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
 $db = new Services();
 ?>
-    <div class="buttons">
-        <div class="pages">
-            <div class="d-flex">
-                <ul class="data">
-                    <li><a class="btn el2" id="add_button" href="/views/services/create.php">Добавить</a></li>
-                </ul>
+<?php
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id <= 2) { ?>
+        <div class="buttons">
+            <div class="pages">
+                <div class="d-flex">
+                    <ul class="data">
+                        <li><a class="btn el2" id="add_button" href="/views/services/create.php">Добавить</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    <?php } ?>
+<?php } ?>
 <?php
 $data = $db->getService();
 foreach ($data as $key => $row) {
@@ -35,7 +40,7 @@ foreach ($data as $key => $row) {
             <div class="wrapper mt-3">
                 <?php
                 if (isset($_SESSION['user'])) {
-                    if ($_SESSION['user']->role_id == 1 || $_SESSION['user']->role_id == 2) { ?>
+                    if ($_SESSION['user']->role_id <= 2) { ?>
                         <div>
                             <form action="../../views/services/update.php" method="post">
                                 <label>

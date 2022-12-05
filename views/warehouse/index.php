@@ -1,6 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 2) {
+        header('Location:../../index.php');
+    }
     require('../../views/layout/header_authed.php');
 } else {
     require('../../views/layout/header.php');

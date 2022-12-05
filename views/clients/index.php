@@ -1,6 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 1) {
+        header('Location:../../index.php');
+    }
     require('../layout/header_authed.php');
 } else {
     require('../layout/header.php');
@@ -8,21 +11,27 @@ if (isset($_SESSION['user'])) {
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Clients.php');
 $db = new Clients();
 ?>
-    <div class="buttons">
-        <div class="pages">
-            <div class="d-flex">
-                <ul class="data">
-                    <li><a class="btn el2" id="add_button" href="/views/clients/create.php">Добавить</a></li>
-                </ul>
+<?php
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id <= 2) { ?>
+        <div class="buttons">
+            <div class="pages">
+                <div class="d-flex">
+                    <ul class="data">
+                        <li><a class="btn el2" id="add_button" href="/views/clients/create.php">Добавить</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    <?php } ?>
+<?php } ?>
 <?php
 $data = $db->getClients();
 foreach ($data as $key => $row) {
     ?>
     <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
         <div class="card-body">
+            <h5 class="card-title mb-2" style="color: #a7d4fd">Клиент №<?php echo $row['id'] ?></h5>
             <div class="m-1">
                 <span class="card-subtitle" style="color: #83c4ff">Фамилия: </span>
                 <span class="card-text"><?php echo $row['last_name']; ?></span>
@@ -50,10 +59,6 @@ foreach ($data as $key => $row) {
             <div class="m-1">
                 <span class="card-subtitle" style="color: #83c4ff">Адрес: </span>
                 <span class="card-text"><?php echo $row['address']; ?></span>
-            </div>
-            <div class="m-1">
-                <span class="card-subtitle" style="color: #83c4ff">ID пользователя: </span>
-                <span class="card-text"><?php echo $row['user_id']; ?></span>
             </div>
             <div class="wrapper mt-3">
                 <div>

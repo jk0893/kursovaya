@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Работающая авторизация И регистрация. Нужно починить изменение... всего">
+    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Пред-релизная версия">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Roles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/img/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/vk_logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/clients/deleteClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/clients/deleteClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/clients/updateClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/clients/updateClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/service/deleteService.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/service/deleteService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/service/updateService.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/service/updateService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/user/updateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/user/updateUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/warehouse/updateWarehouse.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/warehouse/updateWarehouse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/auth/lk.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/lk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/clients/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/clients/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/clients/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/clients/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/clients/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/clients/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/employee/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/employee/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/employee/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header_authed.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header_authed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/services/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/services/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/services/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/warehouse/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/warehouse/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/warehouse/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,25 +60,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/My place/.kursovaya/website/middleware/employee",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/My place/.kursovaya/website&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\My place\.kursovaya\website\middleware\employee" />
@@ -130,6 +137,8 @@
       <workItem from="1669704286688" duration="782000" />
       <workItem from="1669831605657" duration="23616000" />
       <workItem from="1670193681653" duration="19478000" />
+      <workItem from="1670217791850" duration="59000" />
+      <workItem from="1670234271396" duration="16134000" />
     </task>
     <task id="LOCAL-00001" summary="main version of website">
       <created>1666738673941</created>
@@ -236,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669855596475</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Пред-релизная версия">
+      <created>1670217834475</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670217834475</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +291,7 @@
     <MESSAGE value="Отредактировал внешний вид сайта, внёс изменения в код авторизации и регистрации (всё ещё не работает)" />
     <MESSAGE value="1" />
     <MESSAGE value="Работающая авторизация И регистрация. Нужно починить изменение... всего" />
-    <option name="LAST_COMMIT_MESSAGE" value="Работающая авторизация И регистрация. Нужно починить изменение... всего" />
+    <MESSAGE value="Пред-релизная версия" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пред-релизная версия" />
   </component>
 </project>

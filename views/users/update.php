@@ -1,6 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 1) {
+        header('Location:../../index.php');
+    }
     require('../../views/layout/header_authed.php');
 } else {
     require('../../views/layout/header.php');
@@ -15,7 +18,7 @@ foreach ($data as $key => $row) {
             <div class="card-body">
                 <h5 class="card-title mb-2" style="color: #a7d4fd">Пользователь №<?php echo $row['id'] ?></h5>
                 <div class="mb-1">
-                    <span class="card-subtitle" style="color: #83c4ff">Логин: </span>
+                    <span class="card-subtitle" style="color: #83c4ff">Имя пользователя: </span>
                     <label>
                         <input class="card-text"
                                type="text"
@@ -50,7 +53,7 @@ foreach ($data as $key => $row) {
                 <div class="my-2">
                     <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden>
                     <label>
-                        <button class="btn" type="submit" id="submit">Изменить</button>
+                        <button class="btn" type="submit" id="submit" onclick="return confirm('Вы действительно хотите изменить данного пользователя?');">Изменить</button>
                     </label>
                 </div>
             </div>

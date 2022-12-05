@@ -5,7 +5,7 @@ class Employee extends DB
 {
     public function getEmployee()
     {
-        return $this->DBAll('SELECT * from employee');
+        return $this->DBAll('SELECT employee.id, first_name, last_name, father_name, birth_date, passport_s_n, phone_number, position.name from employee, position WHERE (position_id = position.id)');
     }
 
     public function createEmployee($request)

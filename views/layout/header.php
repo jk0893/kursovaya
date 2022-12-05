@@ -35,7 +35,7 @@
     <div class="container">
         <div class="pages">
             <div class="logo">
-                <a class="display-5" href="/index.php"><img src="/img/logo.png" alt="logo" width="50"></a>
+                <a class="display-5" href="/index.php"><img src="/img/logo.png" alt="logo"  width="50"></a>
             </div>
             <div class="d-flex">
                 <ul class="buttons">
@@ -46,7 +46,8 @@
                 <div class='topl'>
                     <div class='wrap'>
                         <a href='#' id='ax1'><img src="/img/user.png" alt="login" width="35"></a>
-                        <div class='menux' id='me1'>
+                        <div class='menux' id='me1' style="border:2px solid #a7d4fd; -ms-filter:progid:DXImageTransform.Microsoft.Glow(color=green, strength=10);
+                             filter:progid:DXImageTransform.Microsoft.Glow(color=green, strength=10);">
                             <div>
                                 <form action="/middleware/auth/auth.php" method="post" id="container">
                                     <label class="mt-3"

@@ -1,6 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 1) {
+        header('Location:../../index.php');
+    }
     require('../../views/layout/header_authed.php');
 }
 else{
@@ -9,6 +12,9 @@ else{
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 $db = new User();
 ?>
+<?php
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id <= 2) { ?>
     <div class="buttons">
         <div class="pages">
             <div class="d-flex">
@@ -18,6 +24,8 @@ $db = new User();
             </div>
         </div>
     </div>
+<?php } ?>
+<?php } ?>
 <?php
 $data = $db->getUser();
 foreach ($data as $key => $row) {

@@ -1,16 +1,21 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']->role_id > 1) {
+        header('Location:../../index.php');
+    }
     require('../layout/header_authed.php');
 } else {
     require('../layout/header.php');
 }
 ?>
-<div class="container mt-5">
+<div class="container mt-5" style="transform: translateX(25%)">
     <form action="../../middleware/clients/createClient.php"
           method="post"
-          class="d-flex flex-column justify-content-center align-items-center mt-3">
-        <label class="mt-5" style="color: #abd7ff;">Фамилия:
+          class="d-flex flex-column justify-content-center align-items-center mt-3"
+          style="background: #2B5477; max-width: 50%; border-radius: 15px">
+        <h3 class="mt-4" style="color:#abd7ff">Создание клиента</h3>
+        <label class="mt-3" style="color: #abd7ff;">Фамилия:
             <input type="text" class="mb-3" alt="" name="last_name" size="35"
                    placeholder="Фамилия">
         </label>
