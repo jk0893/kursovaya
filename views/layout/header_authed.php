@@ -67,13 +67,12 @@
                                                   margin-left: -5%;
                                                   transform: translateY(-15%);
                                                   color: #a7d4fd;"></a>
-                        <div class='menux' id='me1' style="border:2px solid #a7d4fd; filter:progid:DXImageTransform.Microsoft.Glow(color=green, strength=10);">
+                        <div class='menux' id='me1' style="border:2px solid #a7d4fd">
                             <div class="mb-4">
-                                <div class="mb-4 my-2" style="font-size: 20px; color:#a7d4fd;">
-                                    <?= $_SESSION['user']->username ?>(<?= $_SESSION['user']->role_name ?>)
-
+                                <div class="mb-3 my-2" style="font-size: 18px; color:#a7d4fd; border-bottom: 2px solid #a7d4fd; padding-bottom: 10px; margin-left: -1px;font-weight: normal;">
+                                    <?= $_SESSION['user']->username ?><br>(<?= $_SESSION['user']->role_name ?>)
                                 </div>
-                                <div class="mb-4" style="transform: translateX(7.5px);">
+                                <div style="transform: translateX(7.5px)">
                                     <a style="color: #a7d4fd;" href="../../views/auth/lk.php"><img style="transform: translate(-7px,-4.5px)" src="../../img/Home_icon_small.png" width="30" height="30"><b>Личный кабинет</b></a>
                                 </div>
                             </div>

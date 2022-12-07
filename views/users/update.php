@@ -11,52 +11,49 @@ if (isset($_SESSION['user'])) {
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 $db = new User();
 $data = $db->getUser();
-foreach ($data as $key => $row) {
-    ?>
-    <form action="../../middleware/user/updateUser.php" method="post">
-        <div class="card m-4 shadow" id="cards" style="border-radius: 8px">
-            <div class="card-body">
-                <h5 class="card-title mb-2" style="color: #a7d4fd">Пользователь №<?php echo $row['id'] ?></h5>
-                <div class="mb-1">
-                    <span class="card-subtitle" style="color: #83c4ff">Имя пользователя: </span>
-                    <label>
-                        <input class="card-text"
-                               type="text"
-                               style="text-align: center; border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85"
-                               value="<?php echo $row['username']; ?>"
-                               name="username"
-                               required>
-                    </label>
-                </div>
-                <div class="mb-3">
-                    <span class="card-subtitle mb-3" style="color: #83c4ff">Пароль: </span>
-                    <label>
-                        <input class="card-text"
-                               type="password"
-                               style="text-align: center; border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85"
-                               value="<?php echo $row['password']; ?>"
-                               name="password"
-                               required>
-                    </label>
-                </div>
-                <div class="mb-3">
-                    <span class="card-subtitle mb-3" style="color: #83c4ff">Права доступа: </span>
-                    <label>
-                        <input class="card-text"
-                               type="number"
-                               style="text-align: center; border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85"
-                               value="<?php echo $row['role_id']; ?>"
-                               name="role_id"
-                               required>
-                    </label>
-                </div>
-                <div class="my-2">
-                    <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden>
-                    <label>
-                        <button class="btn" type="submit" id="submit" onclick="return confirm('Вы действительно хотите изменить данного пользователя?');">Изменить</button>
-                    </label>
-                </div>
-            </div>
+foreach ($data as $row){ ?>
+<div class="container mt-5" style="display: flex; align-items: start; justify-content: center;">
+    <form action="../../middleware/user/updateUser.php"
+          method="post"
+          class="d-flex flex-column justify-content-center align-items-center mt-3"
+          style="background: #2B5477; border-radius: 15px; border: 2px solid #a7d4fd;">
+        <input name="id" value="<?= $row['id'] ?>" hidden>
+        <h4 style="color:#abd7ff; margin: auto; padding: 25px">Изменение пользователя №<?= $row['id'] ?>: </h4>
+        <label class="mb-3" style="color: #abd7ff;">Имя пользователя:
+            <input id="type"
+                   name="username"
+                   type="search"
+                   size="25"
+                   class="form-control mt-2"
+                   placeholder="Логин"
+                   value="<?= $row['username'] ?>"
+                   pattern="[a-zA-Z0-9]+$" required>
+        </label>
+        <label class="mb-5" style="color: #abd7ff;">Пароль:
+            <input id="type"
+                   name="password"
+                   type="search"
+                   size="25"
+                   class="form-control mt-2"
+                   placeholder="Пароль"
+                   value="<?= $row['password'] ?>"
+                   pattern="[a-zA-Z0-9]+$" required>
+        </label>
+        <p>
+            <label for="role">
+                <select id="role" name="role_id"
+                        style="border-radius: 8px; height: 40px; width: 206px; text-align: center;">
+                    <option value="1">Администратор</option>
+                    <option value="2?>">Сотрудник</option>
+                    <option value="3">Пользователь</option>
+                </select>
+            </label>
+        </p>
+        <div class="mb-4 mt-3">
+            <button class="btn" id="submit" type="submit"
+                    onclick="return confirm('Вы действительно хотите изменить данный сервис ? ');">Изменить
+            </button>
         </div>
     </form>
+</div>
 <?php } ?>

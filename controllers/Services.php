@@ -5,7 +5,7 @@ class Services extends DB
 {
     public function getService()
     {
-        return $this->DBAll('SELECT * from services');
+        return $this->DBAll('SELECT * from services ORDER BY id');
     }
 
     public function createService($request)

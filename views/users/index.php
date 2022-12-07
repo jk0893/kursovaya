@@ -5,68 +5,60 @@ if (isset($_SESSION['user'])) {
         header('Location:../../index.php');
     }
     require('../../views/layout/header_authed.php');
-}
-else{
+} else {
     require('../../views/layout/header.php');
 }
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 $db = new User();
-?>
-<?php
+
 if (isset($_SESSION['user'])) {
-    if ($_SESSION['user']->role_id <= 2) { ?>
-    <div class="buttons">
-        <div class="pages">
-            <div class="d-flex">
-                <ul class="data">
-                    <li><a class="btn el2" id="add_button" href="/views/users/create.php">Добавить</a></li>
-                </ul>
+    if ($_SESSION['user']->role_id < 3) { ?>
+        <div class="buttons">
+            <div class="pages">
+                <div class="d-flex">
+                    <ul class="data">
+                        <li><a class="btn el2" id="add_button" href="/views/users/create.php">Добавить</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-<?php } ?>
-<?php } ?>
+    <?php }
+} ?>
 <?php
 $data = $db->getUser();
-foreach ($data as $key => $row) {
-    ?>
+foreach ($data as $row): ?>
     <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
+        <input name="id" value="<?= $row['id'] ?>" hidden>
         <div class="card-body">
-            <h5 class="card-title mb-2" style="color: #a7d4fd">Пользователь №<?php echo $row['id'] ?></h5>
+            <h5 class="card-title mb-2" style="color: #a7d4fd">Пользователь №<?= $row['id'] ?></h5>
             <div class="mb-1">
                 <span class="card-subtitle" style="color: #83c4ff">Логин: </span>
-                <span class="card-text"><?php echo $row['username']; ?></span>
+                <span class="card-text"><?= $row['username']; ?></span>
             </div>
             <div class="mb-1">
-                <span class="card-subtitle" style="color: #83c4ff">Пароль: </span>
-                <span class="card-text"><?php echo $row['password']; ?></span>
+                <span class="card-subtitle" type="password" style="color: #83c4ff">Пароль: </span>
+                <span class="card-text" type="password"><?= $row['password']?></span>
             </div>
             <div>
                 <span class="card-subtitle" style="color: #83c4ff">Права доступа: </span>
-                <span class="card-text"><?php echo $row['role_name']; ?></span>
+                <span class="card-text"><?= $row['role_name']; ?></span>
             </div>
             <div class="wrapper mt-3">
                 <div>
-                    <form action="../../views/users/update.php?id=<?php echo $row['id'] ?>" method="post">
-                        <label>
-                            <button class="btn" type="submit" id="submit">Изменить</button>
-                        </label>
-                    </form>
+                    <label>
+                        <a href="../../views/users/update.php" class="btn" type="submit" id="submit">Изменить</a>
+                    </label>
                 </div>
                 <div>
-                    <form action="../../middleware/user/deleteUser.php" method="post">
-                        <label>
-                            <input name="id" value="<?php echo $row['id']; ?>" type="text" hidden>
-                            <button class="btn" type="submit" id="submit"
-                                    onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">
-                                Удалить
-                            </button>
-                        </label>
-                    </form>
+                    <label>
+                        <input name="id" value="<?= $row['id']; ?>" type="text" hidden>
+                        <a href="../../middleware/user/deleteUser.php" class="btn" type="submit" id="submit"
+                                onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">
+                            Удалить
+                        </a>
+                    </label>
                 </div>
             </div>
         </div>
     </div>
-<?php } ?>
-<?php
-?>
+<?php endforeach; ?>

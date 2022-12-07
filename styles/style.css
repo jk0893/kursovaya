@@ -220,10 +220,17 @@ input::placeholder {
     text-align: center;
 }
 
-#auth{
+.password {
+    width: 168px;
+    margin: 15px auto;
+    position: relative;
+}
+
+#auth, #password-input{
     background-color: #a7d4fd;
     color: #355e85;
     border-color: #355e85;
+    width: 100%;
 }
 
 /* */

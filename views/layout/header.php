@@ -27,6 +27,14 @@
                 } else $("#me2").slideUp(400);
             });
         });
+
+        $('body').on('click', '.password-checkbox', function(){
+            if ($(this).is(':checked')){
+                $('#password-input').attr('type', 'text');
+            } else {
+                $('#password-input').attr('type', 'password');
+            }
+        });
     </script>
     <title>Обслуживание компьютерной техники</title>
 </head>
@@ -35,7 +43,7 @@
     <div class="container">
         <div class="pages">
             <div class="logo">
-                <a class="display-5" href="/index.php"><img src="/img/logo.png" alt="logo"  width="50"></a>
+                <a class="display-5" href="/index.php"><img src="/img/logo.png" alt="logo" width="50"></a>
             </div>
             <div class="d-flex">
                 <ul class="buttons">
@@ -64,24 +72,26 @@
                                                    required>
                                         </label>
                                     </div>
-                                    <div class="mb-1">
-                                        <label class="form-label">
-                                            <input type="search"
-                                                   class="form-control"
-                                                   size="15"
-                                                   id="auth"
-                                                   name="password"
-                                                   aria-describedby="password"
-                                                   placeholder="Пароль"
-                                                   required>
-                                        </label>
+                                    <div class="mb-1 password">
+                                        <input type="password"
+                                               class="form-control mb-3"
+                                               size="15"
+                                               id="password-input"
+                                               name="password"
+                                               aria-describedby="password"
+                                               placeholder="Пароль"
+                                               required>
+                                        <label style="color: #a7d4fd"><input type="checkbox" class="password-checkbox"> Показать пароль</label>
                                     </div>
-                                    <button type="submit" class="mb-2 btn" style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">Отправить</button>
+                                    <button type="submit" class="mb-2 mt-2 btn"
+                                            style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
+                                        Отправить
+                                    </button>
                                 </form>
                             </div>
                             <div>
                                 <ul>
-                                    <li><a href="/views/auth/registration.php">Нет аккаунта?</a></li>
+                                    <li><a href="/views/auth/registration.php" style="transform: translateX(-16.5px)">Зарегистрироваться</a></li>
                                 </ul>
                             </div>
                         </div>

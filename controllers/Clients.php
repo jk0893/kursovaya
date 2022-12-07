@@ -5,7 +5,7 @@ class Clients extends DB
 {
     public function getClients()
     {
-        return $this->DBAll('SELECT * from clients');
+        return $this->DBAll('SELECT * from clients ORDER BY id');
     }
 
     public function createClients($request)

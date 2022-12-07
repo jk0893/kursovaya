@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 05 2022 г., 06:22
+-- Время создания: Дек 05 2022 г., 15:51
 -- Версия сервера: 10.4.24-MariaDB
 -- Версия PHP: 8.1.13
 
@@ -60,6 +60,8 @@ CREATE TABLE `employee` (
   `birth_date` date NOT NULL,
   `passport_s_n` varchar(10) NOT NULL,
   `phone_number` varchar(12) NOT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `position_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -67,8 +69,8 @@ CREATE TABLE `employee` (
 -- Дамп данных таблицы `employee`
 --
 
-INSERT INTO `employee` (`id`, `first_name`, `last_name`, `father_name`, `birth_date`, `passport_s_n`, `phone_number`, `user_id`) VALUES
-(3, 'Александр', 'Мамонцев', 'Игоревич', '2022-12-05', '2222333333', '88005553535', NULL);
+INSERT INTO `employee` (`id`, `first_name`, `last_name`, `father_name`, `birth_date`, `passport_s_n`, `phone_number`, `address`, `position_id`, `user_id`) VALUES
+(3, 'Александр', 'Мамонцев', 'Игоревич', '2022-12-05', '2222333333', '88005553535', NULL, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -95,9 +97,17 @@ CREATE TABLE `position` (
   `id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
   `salary` int(11) NOT NULL,
-  `role_id` int(11) NOT NULL,
-  `employee_id` int(11) NOT NULL
+  `role_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `position`
+--
+
+INSERT INTO `position` (`id`, `name`, `salary`, `role_id`) VALUES
+(1, 'Администратор', 65000, 1),
+(2, 'Специалист', 45000, 2),
+(3, 'Сотрудник', 30000, 2);
 
 -- --------------------------------------------------------
 
@@ -164,10 +174,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `avatar`) VALUES
 (1, 'root', 'd41ca9b3ff93b24da439c32ab28c24fd03220fbee13d3c4650f20125172ae72d', 1, 'uploads/1670203867441770480f8763ade2af2d7dba662da_jrmky_waifu2x_art_noise1_scale.png'),
-(2, 'volodya', '4f8a146548ca08449ff5e798fa80a8e0391db2f4e298522844e9856552dfe179', 2, 'uploads/1670200237photo_2022-12-03_01-24-39 (5)_waifu2x_art_noise1_scale.png'),
-(3, 'mfy', 'd41ca9b3ff93b24da439c32ab28c24fd03220fbee13d3c4650f20125172ae72d', 3, 'uploads/1669847735OXoyi3PrlU4.jpg'),
-(45, 'sonechka', 'ad495ee8cb279c55f75eec766726fba98d302db13e865f8173ceefde6c058f16', 1, 'uploads/16702123392D34n6XZdQg.jpg'),
-(46, 'mrsasha005', '3f964cdab1dd6125131da9f6582927b2f46c2b586667dfa9060fd9b7a3052cb1', 3, NULL);
+(48, 'sonechka', 'ad495ee8cb279c55f75eec766726fba98d302db13e865f8173ceefde6c058f16', 2, 'uploads/16702413032D34n6XZdQg.jpg'),
+(49, 'volodya', '9874492f060be2a174ca0a9f320a82b1ae7c2f21aeb7d9bad30f47cb27ffac31', 3, 'uploads/1670249026photo_2022-12-03_01-24-39 (5)_waifu2x_art_noise1_scale.png');
 
 -- --------------------------------------------------------
 
@@ -209,7 +217,8 @@ ALTER TABLE `clients`
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `employee_users__fk` (`user_id`);
+  ADD KEY `employee_users__fk` (`user_id`),
+  ADD KEY `employee_position_id_fk` (`position_id`);
 
 --
 -- Индексы таблицы `orders`
@@ -225,7 +234,6 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `position`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `position_employee_id_fk` (`employee_id`),
   ADD KEY `position_roles_id_fk` (`role_id`);
 
 --
@@ -280,7 +288,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT для таблицы `position`
 --
 ALTER TABLE `position`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `roles`
@@ -298,7 +306,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT для таблицы `warehouse`
@@ -320,6 +328,7 @@ ALTER TABLE `clients`
 -- Ограничения внешнего ключа таблицы `employee`
 --
 ALTER TABLE `employee`
+  ADD CONSTRAINT `employee_position_id_fk` FOREIGN KEY (`position_id`) REFERENCES `position` (`id`),
   ADD CONSTRAINT `employee_users__fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
@@ -334,7 +343,6 @@ ALTER TABLE `orders`
 -- Ограничения внешнего ключа таблицы `position`
 --
 ALTER TABLE `position`
-  ADD CONSTRAINT `position_employee_id_fk` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`),
   ADD CONSTRAINT `position_roles_id_fk` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
 
 --

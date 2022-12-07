@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Пред-релизная версия">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f01a6ce5-28af-49d9-8570-009ce81025c8.xml" afterDir="false" />
+    <list default="true" id="be81eb01-ab5c-4722-874f-239fd04030e6" name="Changes" comment="Пред-релизная версия v2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Clients.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/vk_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth/registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Warehouse.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Warehouse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/user/updateUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/user/updateUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serving_comp_tech.sql" beforeDir="false" afterPath="$PROJECT_DIR$/serving_comp_tech.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/lk.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/lk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/auth/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/auth/registration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/clients/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/clients/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/clients/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/clients/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/clients/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/clients/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/employee/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/employee/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/employee/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/employee/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout/header_authed.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout/header_authed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/services/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/services/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/services/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/services/update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/users/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/warehouse/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/warehouse/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/warehouse/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/warehouse/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +124,8 @@
       <workItem from="1669831605657" duration="23616000" />
       <workItem from="1670193681653" duration="19478000" />
       <workItem from="1670217791850" duration="59000" />
-      <workItem from="1670234271396" duration="16134000" />
+      <workItem from="1670234271396" duration="16238000" />
+      <workItem from="1670355261696" duration="26042000" />
     </task>
     <task id="LOCAL-00001" summary="main version of website">
       <created>1666738673941</created>
@@ -252,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670217834475</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Пред-релизная версия v2">
+      <created>1670251819145</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670251819145</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +286,7 @@
     <MESSAGE value="1" />
     <MESSAGE value="Работающая авторизация И регистрация. Нужно починить изменение... всего" />
     <MESSAGE value="Пред-релизная версия" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пред-релизная версия" />
+    <MESSAGE value="Пред-релизная версия v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пред-релизная версия v2" />
   </component>
 </project>

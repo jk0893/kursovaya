@@ -4,7 +4,7 @@ require ('DB.php');
 class Warehouse extends DB
 {
     public function getWarehouse(){
-        return $this->DBAll('SELECT * FROM serving_comp_tech.warehouse');
+        return $this->DBAll('SELECT * FROM warehouse ORDER BY id');
     }
     
     public function createWarehouse($request)

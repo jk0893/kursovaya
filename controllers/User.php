@@ -5,7 +5,7 @@ class User extends DB
 {
     public function getUser()
     {
-        return $this->DBAll('SELECT users.id, username, password, role_id, role_name from users, roles WHERE (role_id = roles.id)');
+        return $this->DBAll('SELECT users.id, username, password, role_id, role_name from users, roles WHERE (role_id = roles.id) ORDER BY id');
     }
 
     public function createUser($request)
@@ -38,14 +38,14 @@ class User extends DB
     public function updateUser($request)
     {
         $req = json_decode($request);
-        $id= $req->id;
+        $id = $req->id;
         $username = $req->username;
         $password = $req->password;
         $role_id = $req->role_id;
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("UPDATE users SET username='{$username}', password='{$password}', role_id='{$role_id}' WHERE users.id='{$id}'");
+            $connect->exec("UPDATE users SET username='{$username}', password='{$password}', role_id='{$role_id}' WHERE id='{$id}'");
             $connect->commit();
             return json_encode([
                 'message' => 'Пользователь обновлён'

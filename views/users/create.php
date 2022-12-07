@@ -9,35 +9,31 @@ if (isset($_SESSION['user'])) {
     require('../../views/layout/header.php');
 }
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
+$db = new User();
+$data = $db->getUser();
 ?>
-    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/style.css">
-
-    <div class="container mt-5">
-        <form action="../../middleware/user/createUser.php"
-              method="post"
-              class="d-flex flex-column justify-content-center align-items-center mt-3">
-            <h3 class="mt-5 mb-4" style="color: #a7d4fd">Добавление</h3>
-            <div class="text-white col-2 mb-3">
-                <label for="username">
-                    <input id="type" name="username" type="search" class="form-control" placeholder="Логин" pattern="[a-zA-Z0-9]+$" required>
-                </label>
-            </div>
-            <div class="text-white col-2 mb-3">
-                <label for="password">
-                    <input id="type" name="password" type="search" class="form-control" placeholder="Пароль" pattern="[a-zA-Z0-9]+$" required>
-                </label>
-            </div>
-            <div class="text-white col-2 mb-3">
-                <label for="role_id">
-                    <input id="role" name="role_id" type="number" class="form-control" max="3"
-                           placeholder="1 - админ, 2 - сотрудник, 3 - пользователь" required>
-                </label>
-            </div>
-            <div class="mt-2">
-                <button class="btn" id="submit" type="submit">Отправить</button>
-            </div>
-        </form>
-    </div>
-<?php
-?>
+<div class="container mt-5" style="display: flex; align-items: start; justify-content: center;">
+    <form action="../../middleware/user/createUser.php"
+          method="post"
+          class="d-flex flex-column justify-content-center align-items-center mt-3"
+          style="background: #2B5477; border-radius: 15px; border: 2px solid #a7d4fd;">
+        <h4 style="color:#abd7ff; margin: auto; padding: 25px">Создание пользователя: </h4>
+        <label class="mb-3" style="color: #abd7ff;">Имя пользователя:
+            <input id="type" name="username" type="search" size="25" class="form-control mt-2" placeholder="Логин"
+                   pattern="[a-zA-Z0-9]+$" required>
+        </label>
+        <label class="mb-4" style="color: #abd7ff;">Пароль:
+            <input id="type" name="password" type="search" size="25" class="form-control mt-2" placeholder="Пароль"
+                   pattern="[a-zA-Z0-9]+$" required>
+        </label>
+        <p><select id="role" name="role_id"
+                   style="border-radius: 8px; height: 40px; width: 206px; text-align: center;">
+                <option value="1">Администратор</option>
+                <option value="2">Сотрудник</option>
+                <option value="3" selected>Пользователь</option>
+            </select></p>
+        <div class="mb-4 mt-2">
+            <button class="btn" id="submit" type="submit">Создать</button>
+        </div>
+    </form>
+</div>
