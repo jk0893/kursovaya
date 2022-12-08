@@ -1,3 +1,6 @@
+<head>
+    <title>Создание детали – Обслуживание компьютерной техники</title>
+</head>
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
@@ -12,7 +15,6 @@ require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Warehouse.php');
 ?>
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/style.css">
-
     <div class="container mt-5">
         <form action="../../middleware/warehouse/createWarehouse.php"
               method="post"

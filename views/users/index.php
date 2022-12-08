@@ -1,3 +1,6 @@
+<head>
+    <title>Пользователи – Обслуживание компьютерной техники</title>
+</head>
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
@@ -24,6 +27,9 @@ if (isset($_SESSION['user'])) {
         </div>
     <?php }
 } ?>
+<head>
+    <title>Пользователи – Обслуживание компьютерной техники</title>
+</head>
 <?php
 $data = $db->getUser();
 foreach ($data as $row): ?>

@@ -26,7 +26,6 @@
             });
         });
     </script>
-    <title>Обслуживание компьютерной техники</title>
 </head>
 <div class="sub-header"></div>
 <header>
@@ -43,10 +42,10 @@
                     <?php
                     if ($_SESSION['user']->role_id == 3) { ?>
                         <li><a class="btn el1" href="/views/services/index.php">Услуги</a></li>
-                    <?php } else if ($_SESSION['user']->role_id == 2) { ?>
+                    <?php } if ($_SESSION['user']->role_id == 2) { ?>
                         <li><a class="btn el1" href="/views/services/index.php">Услуги</a></li>
                         <li><a class="btn el1" href="/views/warehouse/index.php">Склад</a></li>
-                    <?php } else if ($_SESSION['user']->role_id == 1) { ?>
+                    <?php } if ($_SESSION['user']->role_id == 1) { ?>
                         <li><a class="btn el1" href="/views/services/index.php">Услуги</a></li>
                         <li><a class="btn el1" href="/views/warehouse/index.php">Склад</a></li>
                         <li><a class="btn el1" href="/views/clients/index.php">Клиенты</a></li>

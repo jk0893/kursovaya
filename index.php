@@ -42,4 +42,5 @@ if (isset($_SESSION['message'])) {
 </body>
 </html>
 <?php
+require('views/layout/footer.php');
 ?>

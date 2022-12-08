@@ -1,14 +1,29 @@
+<head>
+    <title>Авторизация – Обслуживание компьютерной техники</title>
+</head>
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
     require('../../views/layout/header_authed.php');
     header('Location: ../../views/auth/lk.php');
-}else{
+} else {
     require('../../views/layout/header.php');
 }
 ?>
+<script type='text/javascript' src='/public/js/jquery-3.6.1.min.js'></script>
+<script>
+    $(document).ready(function () {
+        $('body').on('click', '.password-checkbox', function () {
+            if ($(this).is(':checked')) {
+                $('#password-input').attr('type', 'text');
+            } else {
+                $('#password-input').attr('type', 'password');
+            }
+        });
+    });
+</script>
 <body>
-<div id="index">
+<div id="index" style="transform: translateY(25%)">
     <div class="card auth" id="index-body-auth">
         <div class="card-body">
             <div style="border-radius: 8px">
@@ -22,24 +37,26 @@ if (isset($_SESSION['user'])) {
                                    id="auth"
                                    name="username"
                                    aria-describedby="username"
-                                   placeholder="Логин"
+                                   placeholder="Введите логин"
                                    size="25"
                                    required>
                         </label>
                     </div>
                     <div class="mb-2">
                         <label class="form-label">
-                            <input type="search"
-                                   class="form-control"
-                                   size="25"
-                                   id="auth"
+                            <input type="password"
+                                   id="password-input"
+                                   placeholder="Введите пароль"
                                    name="password"
-                                   aria-describedby="password"
-                                   placeholder="Пароль"
+                                   size="25"
+                                   class="form-control mb-3"
                                    required>
+                            <label style="color: #a7d4fd">
+                                <input type="checkbox" class="password-checkbox">Показать пароль
+                            </label>
                         </label>
                     </div>
-                    <button type="submit" class="mb-1 mt-3 btn"
+                    <button type="submit" class="mb-2 mt-2 btn"
                             style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">Отправить
                     </button>
                 </form>

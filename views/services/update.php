@@ -1,3 +1,6 @@
+<head>
+    <title>Изменение услуги – Обслуживание компьютерной техники</title>
+</head>
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
@@ -43,7 +46,7 @@ foreach ($data as $key => $row) {
                 </div>
                 <div class="my-2">
                     <label for="id">
-                        <button class="btn" type="submit" id="submit" onclick="return confirm('Вы действительно хотите изменить данный сервис?');">Изменить</button>
+                        <button class="btn" type="submit" id="submit" onclick="return confirm('Вы действительно хотите изменить данный сервис?');">Сохранить</button>
                     </label>
                 </div>
             </div>

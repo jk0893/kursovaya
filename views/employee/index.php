@@ -1,3 +1,6 @@
+<head>
+    <title>Сотрудники – Обслуживание компьютерной техники</title>
+</head>
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
@@ -11,15 +14,15 @@ if (isset($_SESSION['user'])) {
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Employee.php');
 $db = new Employee();
 ?>
-    <div class="buttons">
-        <div class="pages">
-            <div class="d-flex">
-                <ul class="data">
-                    <li><a class="btn el2" id="add_button" href="/views/employee/create.php">Добавить</a></li>
-                </ul>
-            </div>
+<div class="buttons">
+    <div class="pages">
+        <div class="d-flex">
+            <ul class="data">
+                <li><a class="btn el2" id="add_button" href="/views/employee/create.php">Добавить</a></li>
+            </ul>
         </div>
     </div>
+</div>
 <?php
 $data = $db->getEmployee();
 foreach ($data as $key => $row) {

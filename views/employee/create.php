@@ -1,3 +1,6 @@
+<head>
+    <title>Создание сотрудника – Обслуживание компьютерной техники</title>
+</head>
 <?php
 session_start();
 if (isset($_SESSION['user'])) {

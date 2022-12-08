@@ -6,6 +6,9 @@ if (isset($_SESSION['user'])) {
     header('Location: ../../views/auth/auth.php');
 }
 ?>
+<head>
+    <title><?= $_SESSION['user']->username?> – Обслуживание компьютерной техники</title>
+</head>
 <body>
 <div style="text-align: center; padding-top: 35px; margin-bottom: -35px; color: #abd7ff;">
     <h1>Добро пожаловать, <?= $_SESSION['user']->username ?>!</h1>
@@ -42,7 +45,7 @@ if (isset($_SESSION['user'])) {
                        placeholder="(вводить без пробелов)">
             </label>
             <label style="color: #abd7ff;">Номер телефона:
-                <input type="tel" class="mb-3" alt="" name="phone_number"
+                <input type="tel" pattern="(\+?\d[- .]*){7,13}" class="mb-3" alt="" name="phone_number"
                        style="background: #96C9FF;border-radius: 8px; color: #112A46; padding-top:5px;"
                        placeholder="Номер телефона">
             </label>

@@ -12,7 +12,7 @@
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <script type='text/javascript' src='/public/js/jquery-3.6.1.min.js'></script>
-    <script type='text/javascript'>
+    <script>
         $(document).ready(function () {
             $("#ax1").click(function () {
                 if ($("#me1").css("display") === 'none') {
@@ -26,17 +26,16 @@
                     $("#me1").slideUp(400);
                 } else $("#me2").slideUp(400);
             });
+            $('body').on('click', '.password-checkbox', function () {
+                if ($(this).is(':checked')) {
+                    $('#password-input').attr('type', 'text');
+                } else {
+                    $('#password-input').attr('type', 'password');
+                }
+            });
         });
 
-        $('body').on('click', '.password-checkbox', function(){
-            if ($(this).is(':checked')){
-                $('#password-input').attr('type', 'text');
-            } else {
-                $('#password-input').attr('type', 'password');
-            }
-        });
     </script>
-    <title>Обслуживание компьютерной техники</title>
 </head>
 <div class="sub-header"></div>
 <header>
@@ -72,16 +71,15 @@
                                                    required>
                                         </label>
                                     </div>
-                                    <div class="mb-1 password">
+                                    <div class="password mb-1">
                                         <input type="password"
-                                               class="form-control mb-3"
-                                               size="15"
                                                id="password-input"
+                                               placeholder="Введите пароль"
                                                name="password"
-                                               aria-describedby="password"
-                                               placeholder="Пароль"
-                                               required>
-                                        <label style="color: #a7d4fd"><input type="checkbox" class="password-checkbox"> Показать пароль</label>
+                                               class="form-control mb-3">
+                                        <label style="color: #a7d4fd">
+                                            <input type="checkbox" class="password-checkbox">Показать пароль
+                                        </label>
                                     </div>
                                     <button type="submit" class="mb-2 mt-2 btn"
                                             style="color:#a7d4fd; background-color:#5D88AC; border-color: #a7d4fd">
@@ -91,7 +89,8 @@
                             </div>
                             <div>
                                 <ul>
-                                    <li><a href="/views/auth/registration.php" style="transform: translateX(-16.5px)">Зарегистрироваться</a></li>
+                                    <li><a href="/views/auth/registration.php" style="transform: translateX(-16.5px)">Зарегистрироваться</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

@@ -1,3 +1,6 @@
+<head>
+    <title>Регистрация – Обслуживание компьютерной техники</title>
+</head>
 <?php
 session_start();
 if (isset($_SESSION['user'])) {
@@ -9,7 +12,7 @@ if (isset($_SESSION['user'])) {
 ?>
 
 <body>
-<div id="index" >
+<div id="index" style="transform: translateY(12.5%)">
     <div class="card auth" id="index-body-auth">
         <div class="card-body">
             <div style="border-radius: 8px">
