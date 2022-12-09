@@ -13,7 +13,6 @@ if (isset($_SESSION['user'])) {
 }
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 $db = new User();
-
 if (isset($_SESSION['user'])) {
     if ($_SESSION['user']->role_id < 3) { ?>
         <div class="buttons">
@@ -26,15 +25,10 @@ if (isset($_SESSION['user'])) {
             </div>
         </div>
     <?php }
-} ?>
-<head>
-    <title>Пользователи – Обслуживание компьютерной техники</title>
-</head>
-<?php
+}
 $data = $db->getUser();
-foreach ($data as $row): ?>
+foreach ($data as $key => $row) { ?>
     <div class="card m-3 shadow" id="cards" style="border-radius: 8px">
-        <input name="id" value="<?= $row['id'] ?>" hidden>
         <div class="card-body">
             <h5 class="card-title mb-2" style="color: #a7d4fd">Пользователь №<?= $row['id'] ?></h5>
             <div class="mb-1">
@@ -43,7 +37,7 @@ foreach ($data as $row): ?>
             </div>
             <div class="mb-1">
                 <span class="card-subtitle" type="password" style="color: #83c4ff">Пароль: </span>
-                <span class="card-text" type="password"><?= $row['password']?></span>
+                <span class="card-text" type="password"><?= $row['password'] ?></span>
             </div>
             <div>
                 <span class="card-subtitle" style="color: #83c4ff">Права доступа: </span>
@@ -51,15 +45,17 @@ foreach ($data as $row): ?>
             </div>
             <div class="wrapper mt-3">
                 <div>
-                    <label>
-                        <a href="../../views/users/update.php" class="btn" type="submit" id="submit">Изменить</a>
-                    </label>
+                    <form method="get" action="../../views/users/update.php">
+                        <input type="submit" name="id" value="<?= $row['id'] ?>" hidden>
+                        <a href='../../views/users/update.php?id=<?= $row['id'] ?>' class="btn" type="submit"
+                           id="submit">Изменить</a>
+                    </form>
                 </div>
                 <div>
                     <label>
                         <input name="id" value="<?= $row['id']; ?>" type="text" hidden>
                         <a href="../../middleware/user/deleteUser.php" class="btn" type="submit" id="submit"
-                                onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">
+                           onclick="return confirm('Вы действительно хотите удалить данного пользователя?');">
                             Удалить
                         </a>
                     </label>
@@ -67,4 +63,4 @@ foreach ($data as $row): ?>
             </div>
         </div>
     </div>
-<?php endforeach; ?>
+<?php } ?>

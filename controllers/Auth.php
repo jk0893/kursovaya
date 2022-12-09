@@ -10,7 +10,8 @@ class Auth extends DB
         $username = $req->username;
         $password = $req->password;
         $connect = $this->connect();
-        $sql = $connect->prepare('SELECT users.id,username,password,role_id,avatar, role_name from users,roles where username=:username and password=:password and role_id=roles.id');
+        $sql = $connect->prepare('SELECT users.id,username,password,role_id,avatar, role_name from users,roles
+                                                where username=:username and password=:password and role_id=roles.id');
         $sql->execute([
             'username' => $username,
             'password' => $password,

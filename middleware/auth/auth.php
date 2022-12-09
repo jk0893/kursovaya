@@ -14,6 +14,6 @@ $response = $db->login(json_encode([
 if($_SESSION['user']) {
     header('Location: ../../views/auth/lk.php');
 }else{
-    $_SESSION['message'] = 'Неправильный пароль или логин';
-    header('Location: ../../views/auth/auth.php');
+   $_SESSION['message'] = 'Неправильный пароль или логин';
+   header('Location: ../../views/auth/auth.php');
 }

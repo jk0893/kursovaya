@@ -13,12 +13,8 @@ if (isset($_SESSION['user'])) {
 }
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/User.php');
 $db = new User();
-$data = $db->getUser();
-foreach ($data as $row) { ?>
-    <pre>
-        <?php print_r($row['id']) ?>
-    </pre>
-
+$data = $db -> getUser();
+foreach ($data as $key => $row){ ?>
     <div class="container mt-5" style="display: flex; align-items: start; justify-content: center;">
         <form action="../../middleware/user/updateUser.php"
               method="post"
@@ -34,7 +30,7 @@ foreach ($data as $row) { ?>
                        class="form-control mt-2"
                        placeholder="Логин"
                        value="<?= $row['username'] ?>"
-                       pattern="[a-zA-Z0-9]+$" required>
+                       pattern="[a-zA-Z0-9]+$" required/>
             </label>
             <label class="mb-5" style="color: #abd7ff;">Пароль:
                 <input id="type"
@@ -44,7 +40,7 @@ foreach ($data as $row) { ?>
                        class="form-control mt-2"
                        placeholder="Пароль"
                        value="<?= $row['password'] ?>"
-                       pattern="[a-zA-Z0-9]+$" required>
+                       pattern="[a-zA-Z0-9]+$" required/>
             </label>
             <p>
                 <label for="role">

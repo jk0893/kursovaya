@@ -5,7 +5,7 @@ class User extends DB
 {
     public function getUser()
     {
-        return $this->DBAll('SELECT users.id, username, password, role_id, role_name from users, roles WHERE (role_id = roles.id) ORDER BY id');
+        return $this->DBAll('SELECT users.id, username, password, role_id, role_name from users, roles WHERE (role_id = roles.id) ORDER BY id ');
     }
 
     public function createUser($request)
@@ -17,7 +17,7 @@ class User extends DB
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $sql = $connect->prepare('INSERT INTO serving_comp_tech.users (username,password, role_id) values (:username,:password, :role_id)');
+            $sql = $connect->prepare('INSERT INTO serving_comp_tech.users (username,password, role_id) values (?,?,?)');
             $sql->execute([
                 'username' => $username,
                 'password' => $password,
