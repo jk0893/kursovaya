@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 05 2022 г., 15:51
+-- Время создания: Дек 10 2022 г., 05:48
 -- Версия сервера: 10.4.24-MariaDB
 -- Версия PHP: 8.1.13
 
@@ -35,7 +35,7 @@ CREATE TABLE `clients` (
   `birth_date` date NOT NULL,
   `passport_s_n` varchar(10) NOT NULL,
   `phone_number` varchar(12) NOT NULL,
-  `address` varchar(45) NOT NULL,
+  `address` varchar(100) NOT NULL,
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -44,7 +44,8 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `first_name`, `last_name`, `father_name`, `birth_date`, `passport_s_n`, `phone_number`, `address`, `user_id`) VALUES
-(7, 'Мамонцев', 'Александр', 'Игоревич', '2002-08-28', '2222333333', '88005553535', 'тестовый адрес', NULL);
+(7, 'Мамонцев', 'Александр', 'Игоревич', '2002-08-28', '2222333333', '88005553535', 'тестовый адрес', NULL),
+(8, ' Иван', 'Иванов', 'Иванович', '2022-12-01', '3333444444', '88005553536', 'тестовый адрес', NULL);
 
 -- --------------------------------------------------------
 
@@ -125,9 +126,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `role_name`) VALUES
-(1, 'admin'),
-(2, 'employee'),
-(3, 'user');
+(1, 'Администратор'),
+(2, 'Сотрудник'),
+(3, 'Пользователь');
 
 -- --------------------------------------------------------
 
@@ -151,8 +152,8 @@ INSERT INTO `services` (`id`, `name`, `type`, `price`) VALUES
 (15, 'test2', 'test2', 23),
 (16, 'test3', 'test', 123),
 (17, 'test4', 'test', 123),
-(18, 'test6', 'test', 123),
-(19, 'test5', 'test', 123);
+(18, 'test5', 'test', 123),
+(19, 'test6', 'test', 123);
 
 -- --------------------------------------------------------
 
@@ -175,7 +176,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `avatar`) VALUES
 (1, 'root', 'd41ca9b3ff93b24da439c32ab28c24fd03220fbee13d3c4650f20125172ae72d', 1, 'uploads/1670203867441770480f8763ade2af2d7dba662da_jrmky_waifu2x_art_noise1_scale.png'),
 (48, 'sonechka', 'ad495ee8cb279c55f75eec766726fba98d302db13e865f8173ceefde6c058f16', 2, 'uploads/16702413032D34n6XZdQg.jpg'),
-(49, 'volodya', '9874492f060be2a174ca0a9f320a82b1ae7c2f21aeb7d9bad30f47cb27ffac31', 3, 'uploads/1670249026photo_2022-12-03_01-24-39 (5)_waifu2x_art_noise1_scale.png');
+(59, 'mfy', 'abb45ef89186194a3e3ee700894caeb3b86ced38db1fa3ec7fd0f5e2ff6d9ec1', 3, 'uploads/1670594450q_s_J7grxq4.jpg');
 
 -- --------------------------------------------------------
 
@@ -195,7 +196,7 @@ CREATE TABLE `warehouse` (
 --
 
 INSERT INTO `warehouse` (`id`, `hardware_name`, `quantity`, `price`) VALUES
-(15, 'lol', 4, 123),
+(15, 'lol', 4, 122),
 (16, 'kek', 1, 123),
 (17, 'che', 5, 123),
 (18, 'bu', 4, 123),
@@ -270,7 +271,7 @@ ALTER TABLE `warehouse`
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `employee`
@@ -288,7 +289,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT для таблицы `position`
 --
 ALTER TABLE `position`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `roles`
@@ -306,7 +307,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT для таблицы `warehouse`
