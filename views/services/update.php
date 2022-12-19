@@ -29,9 +29,9 @@ foreach ($data as $key => $row) {
                     </label>
                 </div>
                 <div class="mb-3">
-                    <span class="card-subtitle mb-3" style="color: #83c4ff">Количество: </span>
+                    <span class="card-subtitle mb-3" style="color: #83c4ff">Тип услуги: </span>
                     <label for="type">
-                        <input class="card-text" name="quantity"
+                        <input class="card-text" name="type"
                                style="border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85"
                                value="<?php echo $row['type']; ?>">
                     </label>

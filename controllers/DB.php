@@ -2,7 +2,7 @@
 
 class DB
 {
-    protected function connect(): PDO
+    public function connect(): PDO
     {
         return new PDO('mysql:host=localhost; dbname=serving_comp_tech; charset=utf8', 'root', '');
     }
