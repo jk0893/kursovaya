@@ -71,6 +71,10 @@ header {
     transform: translateY(4px);
 }
 
+.image{
+    filter: blur(1px);
+}
+
 #submit {
     border-color: #6e9ecb;
     border-width: 2px;
@@ -102,22 +106,20 @@ img {
 
 .card img {
     height: 170px;
-    object-fit: cover;
     display: block;
     width: 100%;
-    filter: blur(1px);
 }
 .card-title{
     color: #6e9ecb;
 }
 
-#about-us, #index {
+#index {
     display: flex;
     flex-grow: 1;
     justify-content: center;
 }
 
-#about-us-body, #index-body{
+#index-body{
     border-radius: 10px;
     display: flex;
     height: 15%;
@@ -162,7 +164,7 @@ input::placeholder {
     color: #254467;
 }
 
-#about-us p, #index p {
+#index p {
     width: 100%;
     color: #a7d4fd;
     align-items: end;

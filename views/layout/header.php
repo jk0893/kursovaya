@@ -1,5 +1,3 @@
-<?php
-?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -11,30 +9,23 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <script type='text/javascript' src='/public/js/jquery-3.6.1.min.js'></script>
+    <script type="text/javascript" src="/public/js/jquery-3.6.1.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#ax1").click(function () {
-                if ($("#me1").css("display") === 'none') {
+                if ($("#me1").css("display") === "none") {
                     $("#me1").slideDown(400);
                     $("#me2").slideUp(400);
                 } else $("#me1").slideUp(400);
             });
-            $("#ax2").click(function () {
-                if ($("#me2").css("display") === 'none') {
-                    $("#me2").slideDown(400);
-                    $("#me1").slideUp(400);
-                } else $("#me2").slideUp(400);
-            });
-            $('body').on('click', '.password-checkbox', function () {
-                if ($(this).is(':checked')) {
-                    $('#password-input').attr('type', 'text');
+            $("body").on("click", ".password-checkbox", function () {
+                if ($(this).is(":checked")) {
+                    $("#password-input").attr("type", "text");
                 } else {
-                    $('#password-input').attr('type', 'password');
+                    $("#password-input").attr("type", "password");
                 }
             });
         });
-
     </script>
 </head>
 <div class="sub-header"></div>

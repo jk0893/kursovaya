@@ -18,10 +18,11 @@ class Clients extends DB
         $passport_s_n = $req->passport_s_n;
         $phone_number = $req->phone_number;
         $address = $req->address;
+        $user_id = $req->user_id;
         $connect = $this->connect();
         try {
             $connect->beginTransaction();
-            $connect->exec("INSERT INTO clients (first_name,last_name, father_name,birth_date,passport_s_n,phone_number,address) values ('{$first_name}','{$last_name}','{$father_name}', '{$birth_date}', '{$passport_s_n}', '{$phone_number}', '{$address}')");
+            $connect->exec("INSERT INTO clients (first_name, last_name, father_name, birth_date, passport_s_n, phone_number, address, user_id) values ('{$first_name}','{$last_name}','{$father_name}', '{$birth_date}', '{$passport_s_n}', '{$phone_number}', '{$address}', '{$user_id}')");
             $connect->commit();
             return json_encode([
                 'message' => 'Клиент добавлен'

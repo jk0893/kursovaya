@@ -25,7 +25,7 @@ foreach ($data as $key => $row) {
                 <div class="mb-3">
                     <span class="card-subtitle" style="color: #83c4ff">Фамилия:</span>
                     <label class="card-text" style="color: #abd7ff;">
-                        <input type="text" class="mb-3" alt="" name="first_name"
+                        <input type="text" class="mb-3" alt="" name="last_name"
                                style="background: #96C9FF;border-radius: 8px; color: #112A46; padding-top:5px;"
                                value="<?php echo $row['last_name'] ?>" placeholder="Фамилия">
                     </label>
@@ -33,7 +33,7 @@ foreach ($data as $key => $row) {
                 <div class="mb-3">
                     <span class="card-subtitle" style="color: #83c4ff">Имя:</span>
                     <label>
-                        <input type="text" class="mb-3" alt="" name="last_name"
+                        <input type="text" class="mb-3" alt="" name="first_name"
                                style="background: #96C9FF;border-radius: 8px; color: #112A46; padding-top:5px;"
                                value="<?php echo $row['first_name'] ?>" placeholder="Имя">
                     </label>

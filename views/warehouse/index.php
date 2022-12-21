@@ -34,7 +34,7 @@ foreach ($data as $key => $row) {
             </div>
             <div>
                 <span class="card-subtitle" style="color: #83c4ff">Стоимость: </span>
-                <span class="card-text"><?php echo $row['price']; ?></span>
+                <span class="card-text"><?php echo $row['price']; ?> руб.</span>
             </div class="mb-1">
             <div class="wrapper mt-3">
                 <div>

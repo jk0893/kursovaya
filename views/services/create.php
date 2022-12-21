@@ -22,17 +22,17 @@ require($_SERVER['DOCUMENT_ROOT'] . '/controllers/Services.php');
               class="d-flex flex-column justify-content-center align-items-center mt-3">
             <h3 class="mt-5 mb-4" style="color: #a7d4fd">Добавление</h3>
             <div class="text-white col-2 mb-3">
-                <label>
+                <label for="name">
                     <input id="name" name="name" type="search" class="form-control" placeholder="Название" required>
                 </label>
             </div>
             <div class="text-white col-2 mb-3">
-                <label>
+                <label for="type">
                     <input id="type" name="type" type="search" class="form-control" placeholder="Тип" required>
                 </label>
             </div>
             <div class="text-white col-2 mb-3">
-                <label>
+                <label for="price">
                     <input id="price" name="price" type="search" class="form-control"
                            placeholder="Стоимость" required>
                 </label>

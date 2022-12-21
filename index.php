@@ -7,7 +7,6 @@ else{
     require('views/layout/header.php');
 }
 ?>
-
 <!doctype html>
 <html lang="ru">
 <head>
@@ -28,8 +27,8 @@ if (isset($_SESSION['message'])) {
 ?>
 <div id="index">
     <div class="card" id="index-body">
-        <div>
-            <img src="img/about-us.jpg" class="card-img-top mb-3" alt="" style="border-radius: 8px">
+        <div class="image">
+            <img src="img/about-us.jpg" class="card-img-top mb-3" alt="">
         </div>
         <h4 class="card-title">О нашем сервисе</h4>
         <p>Наш сервис нацелен на

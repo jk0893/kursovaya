@@ -18,12 +18,6 @@
                     $("#me2").slideUp(400);
                 } else $("#me1").slideUp(400);
             });
-            $("#ax2").click(function () {
-                if ($("#me2").css("display") === 'none') {
-                    $("#me2").slideDown(400);
-                    $("#me1").slideUp(400);
-                } else $("#me2").slideUp(400);
-            });
         });
     </script>
 </head>
@@ -34,8 +28,8 @@
             <div class="logo">
                 <a class="display-5"
                    href="/index.php"><img  src="/img/logo.png"
-                                          alt="logo"
-                                          width="55"></a>
+                                           alt="logo"
+                                           width="55"></a>
             </div>
             <div class="d-flex">
                 <ul class="buttons">
@@ -57,7 +51,7 @@
             <div class="auth">
                 <div class="topl">
                     <div class="wrap">
-                        <a href='#' id='ax1'><img src="../../<?= $_SESSION['user']->avatar ?>"
+                        <a href="#" id="ax1"><img src="../../<?= $_SESSION["user"]->avatar ?>"
                                                   width="50" height="50"
                                                   alt="avatar"
                                                   style="text-decoration: none;
@@ -66,10 +60,10 @@
                                                   margin-left: -5%;
                                                   transform: translateY(-15%);
                                                   color: #a7d4fd;"></a>
-                        <div class='menux' id='me1' style="border:2px solid #a7d4fd">
+                        <div class="menux" id='me1' style="border:2px solid #a7d4fd">
                             <div class="mb-4">
                                 <div class="mb-3 my-2" style="font-size: 18px; color:#a7d4fd; border-bottom: 2px solid #a7d4fd; padding-bottom: 10px; margin-left: -1px;font-weight: normal;">
-                                    <?= $_SESSION['user']->username ?><br>(<?= $_SESSION['user']->role_name ?>)
+                                    <?= $_SESSION['user']->username ?><br>(<?= $_SESSION["user"]->role_name ?>)
                                 </div>
                                 <div style="transform: translateX(7.5px)">
                                     <a style="color: #a7d4fd;" href="../../views/auth/lk.php"><img style="transform: translate(-7px,-4.5px)" src="../../img/Home_icon_small.png" width="30" height="30"><b>Личный кабинет</b></a>

@@ -23,7 +23,7 @@ foreach ($data as $key => $row) {
                 <div class="mb-3">
                     <span class="card-subtitle" style="color: #83c4ff">Название: </span>
                     <label for="name">
-                        <input class="card-text" name="hardware_name"
+                        <input class="card-text" name="name"
                                style="border-radius: 6px; border-color: #6e9ecb; background: #6197c0; color: #355e85"
                                value="<?php echo $row['name']; ?>">
                     </label>
