@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 10 2022 г., 05:48
+-- Время создания: Дек 22 2022 г., 00:28
 -- Версия сервера: 10.4.24-MariaDB
 -- Версия PHP: 8.1.13
 
@@ -44,8 +44,10 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `first_name`, `last_name`, `father_name`, `birth_date`, `passport_s_n`, `phone_number`, `address`, `user_id`) VALUES
-(7, 'Мамонцев', 'Александр', 'Игоревич', '2002-08-28', '2222333333', '88005553535', 'тестовый адрес', NULL),
-(8, ' Иван', 'Иванов', 'Иванович', '2022-12-01', '3333444444', '88005553536', 'тестовый адрес', NULL);
+(7, 'Мамонцев', 'Александр', 'Игоревич', '2002-08-28', '2222333333', '88005553535', 'Ул. Пушкина, дом 1', 60),
+(8, 'Иванов', 'Иван', 'Иванович', '2022-12-01', '3333444444', '79145465475', 'Ул. Ленина, дом 23, кв. 94', 61),
+(10, 'Которенко', 'Мария', 'Владимировна', '1993-07-25', '2513959547', '79029877554', 'ул. Ленина, дом 47, кв. 5', 48),
+(11, 'Длиненовна', 'Анастасия', 'Святославовна', '2000-01-01', '2251954548', '79014394375', 'ул. Пушкина, дом 15', NULL);
 
 -- --------------------------------------------------------
 
@@ -71,22 +73,10 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`id`, `first_name`, `last_name`, `father_name`, `birth_date`, `passport_s_n`, `phone_number`, `address`, `position_id`, `user_id`) VALUES
-(3, 'Александр', 'Мамонцев', 'Игоревич', '2022-12-05', '2222333333', '88005553535', NULL, 1, NULL);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `orders`
---
-
-CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `status` varchar(45) NOT NULL,
-  `client_id` int(11) NOT NULL,
-  `employee_id` int(11) NOT NULL,
-  `service_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+(4, 'Геннадий ', 'Носов ', 'Эльдарович', '1979-09-27', '4419787770', '75045438323', 'пр. Космонавтов, дом 56', 2, NULL),
+(5, 'Иосиф ', 'Жданов ', 'Денисович', '1994-10-12', '4473613777', '71726902437', 'Гоголя, дом 13', 3, NULL),
+(6, 'Карл ', 'Капустин ', 'Робертович', '1999-02-06', '4795301817', '74596817608', 'пер. Гагарина, дом36', 2, NULL),
+(7, 'Пантелей ', 'Лазарев ', 'Максович', '1992-09-29', '4092601010', '79201206793', 'пл. Домодедовская, дом 62', 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -148,12 +138,11 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `name`, `type`, `price`) VALUES
-(13, 'test1', 'test122', 123),
-(15, 'test2', 'test2', 23),
-(16, 'test3', 'test', 123),
-(17, 'test4', 'test', 123),
-(18, 'test5', 'test', 123),
-(19, 'test6', 'test', 123);
+(13, 'Диагностика', 'Диагностика', 0),
+(20, 'Ремонт видеокарты', 'Ремонт', 3000),
+(21, 'Ремонт компьютерной мыши', 'Ремонт', 1000),
+(22, 'Ремонт блока питания', 'Ремонт', 2000),
+(23, 'Ремонт материнской платы', 'Ремонт', 1000);
 
 -- --------------------------------------------------------
 
@@ -175,8 +164,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `role_id`, `avatar`) VALUES
 (1, 'root', 'd41ca9b3ff93b24da439c32ab28c24fd03220fbee13d3c4650f20125172ae72d', 1, 'uploads/1670203867441770480f8763ade2af2d7dba662da_jrmky_waifu2x_art_noise1_scale.png'),
-(48, 'sonechka', 'ad495ee8cb279c55f75eec766726fba98d302db13e865f8173ceefde6c058f16', 2, 'uploads/16702413032D34n6XZdQg.jpg'),
-(59, 'mfy', 'abb45ef89186194a3e3ee700894caeb3b86ced38db1fa3ec7fd0f5e2ff6d9ec1', 3, 'uploads/1670594450q_s_J7grxq4.jpg');
+(48, 'sonechka', 'efa00909604700a8f2e2a03159659e12fd89c49396d647a986e6aa5f6825779283d94c19700842aacc39bebfe24ae8ec89f2', 1, 'uploads/16702413032D34n6XZdQg.jpg'),
+(60, 'volodya', '56afefe49c489175525568350ca7425ff1f81bcae6c678172454b21f69092cdf', 2, 'uploads/16715961367008303c79a057b60ca8e1a5b37ec934.jpg'),
+(61, 'dima', '3830fe41d0423bada09282d6c94a4abfb0fcdb2e607227881d9671e8fd48d112', 3, 'uploads/1671635580Screenshot_1.png'),
+(62, 'mfy', '56afefe49c489175525568350ca7425ff1f81bcae6c678172454b21f69092cdf', 3, 'uploads/1671658343r2mKkXmdt2w.jpg');
 
 -- --------------------------------------------------------
 
@@ -196,11 +187,11 @@ CREATE TABLE `warehouse` (
 --
 
 INSERT INTO `warehouse` (`id`, `hardware_name`, `quantity`, `price`) VALUES
-(15, 'lol', 4, 122),
-(16, 'kek', 1, 123),
-(17, 'che', 5, 123),
-(18, 'bu', 4, 123),
-(19, 'rek', 5, 123);
+(20, 'MSI GTX 1080Ti', 6, 30000),
+(21, 'Ryzen 7 5600X', 4, 15000),
+(22, 'GIGABYTE B450 DS3H', 5, 6000),
+(23, 'Microsoft Pro Intellimouse ', 3, 5500),
+(24, 'BenQ XL 2546K', 2, 58500);
 
 --
 -- Индексы сохранённых таблиц
@@ -211,24 +202,15 @@ INSERT INTO `warehouse` (`id`, `hardware_name`, `quantity`, `price`) VALUES
 --
 ALTER TABLE `clients`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `clients_users_id_fk` (`user_id`);
+  ADD KEY `clients_users__fk` (`user_id`);
 
 --
 -- Индексы таблицы `employee`
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `employee_users__fk` (`user_id`),
-  ADD KEY `employee_position_id_fk` (`position_id`);
-
---
--- Индексы таблицы `orders`
---
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `orders_clients_id_fk` (`client_id`),
-  ADD KEY `orders_employee_id_fk` (`employee_id`),
-  ADD KEY `orders_services_id_fk` (`service_id`);
+  ADD KEY `employee_position_id_fk` (`position_id`),
+  ADD KEY `employee_users__fk` (`user_id`);
 
 --
 -- Индексы таблицы `position`
@@ -255,7 +237,7 @@ ALTER TABLE `services`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_username_uindex` (`username`),
-  ADD KEY `users_roles_id_fk` (`role_id`);
+  ADD KEY `users_roles__fk` (`role_id`);
 
 --
 -- Индексы таблицы `warehouse`
@@ -271,19 +253,13 @@ ALTER TABLE `warehouse`
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT для таблицы `orders`
---
-ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT для таблицы `position`
@@ -301,29 +277,23 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT для таблицы `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT для таблицы `warehouse`
 --
 ALTER TABLE `warehouse`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
-
---
--- Ограничения внешнего ключа таблицы `clients`
---
-ALTER TABLE `clients`
-  ADD CONSTRAINT `clients_users_id_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `employee`
@@ -331,14 +301,6 @@ ALTER TABLE `clients`
 ALTER TABLE `employee`
   ADD CONSTRAINT `employee_position_id_fk` FOREIGN KEY (`position_id`) REFERENCES `position` (`id`),
   ADD CONSTRAINT `employee_users__fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Ограничения внешнего ключа таблицы `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_clients_id_fk` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`),
-  ADD CONSTRAINT `orders_employee_id_fk` FOREIGN KEY (`employee_id`) REFERENCES `employee` (`id`),
-  ADD CONSTRAINT `orders_services_id_fk` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `position`
@@ -350,7 +312,7 @@ ALTER TABLE `position`
 -- Ограничения внешнего ключа таблицы `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_roles_id_fk` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
+  ADD CONSTRAINT `users_roles__fk` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
